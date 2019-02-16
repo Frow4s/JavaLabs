@@ -1,9 +1,9 @@
 package Persons;
 
 import Enums.Condition;
-import Enums.Place;
-import Exception.Pusto;
-import Objects.Gryadka;
+import Enums.Place  ;
+import Exception.Pusto  ;
+import Objects.Gryadka ;
 
 public class LilMan extends Man {
     public LilMan(String name, Condition condition, Place place, String action) {
