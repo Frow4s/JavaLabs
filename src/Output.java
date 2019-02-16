@@ -4,7 +4,7 @@ import Objects.Gryadka;
 import Objects.House;
 import Persons.LilMan;
 import Exception.Pusto;
-import Persons.Man;
+import Persons.Man ;
 import Persons.Neznaika;
 
 public class Output {
