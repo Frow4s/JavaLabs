@@ -37,7 +37,12 @@ public abstract class Gryadka implements  ForGryadka {
         public Strawberry(String name,int count,String type){
             super(name,10,"с клубникой");
         }
-     }
+
+        @Override
+        public void setCount(int count) {
+            super.setCount(10);
+        }
+    }
     public class Pomidor extends Gryadka{
         public Pomidor(String name,int count,String type){
             super(name,0,"с помидорами");

@@ -38,18 +38,18 @@ public class LilMan extends Man {
 
     public void Making() throws Pusto{
         if (Gryadka.Cucumber.count > 0) {
-            System.out.print("Cобирает огурцы");
+            System.out.println("Cобирает огурцы");
             Gryadka.Cucumber.count -= 1;
         } else {
-            throw new Pusto("Грядки с огурцами закончились");
+            System.out.println("Грядки с огурцами закончились");
         }
         if (Gryadka.Pomidor.count > 0 && Gryadka.Cucumber.count == 0) {
             System.out.print("Собирает помидоры");
         } else {
-            throw new Pusto("Грядки с помидорами закончились");
+            System.out.println("Грядки с помидорами закончились");
         }
-        if(Gryadka.Pomidor.count==0 && Gryadka.Cucumber.count == 0 && Gryadka.Strawberry.count>0){
-            System.out.print("Собрает клубнику");
+        if(Gryadka.Strawberry.count==0 && Gryadka.Cucumber.count == 0 && Gryadka.Strawberry.count>0){
+            System.out.println("Собрает клубнику");
         }
         else{
             throw new Pusto("Грядки закончились");
