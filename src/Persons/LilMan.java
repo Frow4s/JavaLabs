@@ -36,7 +36,8 @@ public class LilMan extends Man {
         return super.getAction();
     }
 
-    public void Making() throws Pusto{
+    public void Making(Integer count1,Integer
+                        count2,Integer count3) throws Pusto{
         if (Gryadka.Cucumber.count > 0) {
             System.out.println("Cобирает огурцы");
             Gryadka.Cucumber.count -= 1;

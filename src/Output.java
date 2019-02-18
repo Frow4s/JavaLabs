@@ -13,6 +13,7 @@ public class Output {
     }
 
     public void tellTheStory()  {
+        Gryadka.Cucumber Cucumber=new Gryadka.Cucumber("213",12,"с клубникой");
         LilMan lilMan=new LilMan("Коротышка", Condition.NONE,Place.CucumberGryadka,"собирает");
         try {
             lilMan.Making();
