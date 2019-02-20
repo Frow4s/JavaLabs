@@ -5,12 +5,12 @@ import Interfaces.ForAll;
 import Interfaces.ForGryadka;
 
 
-public abstract class Gryadka implements  ForGryadka {
+public abstract class Gryadka implements ForGryadka {
     private String name;
     private String type;
-    public static int count;
+    private int count;
 
-    public Gryadka(String name,int count,String type){
+    public Gryadka(String name, int count, String type){
         this.name="грядка";
         this.count=count;
         this.type=type;
@@ -25,7 +25,7 @@ public abstract class Gryadka implements  ForGryadka {
     }
 
     public String getName() {
-        return name;
+        return name + " " + type;
     }
 
     public int getCount() {
@@ -35,17 +35,17 @@ public abstract class Gryadka implements  ForGryadka {
 
     public static class Strawberry extends Gryadka{
         public Strawberry(String name,int count,String type){
-            super(name,10,"с клубникой");
+            super(name,count,"с клубникой");
         }
     }
     public static class Pomidor extends Gryadka{
-        public Pomidor(String name,int count,String type){
-            super(name,0,"с помидорами");
+        public Pomidor(String name, int count,String type){
+            super(name,count,"с помидорами");
         }
     }
     public static class Cucumber extends Gryadka{
         public Cucumber(String name,int count,String type){
-            super(name,0,"с огурцами");
+            super(name,count,"с огурцами");
         }
     }
 }
