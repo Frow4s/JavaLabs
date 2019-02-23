@@ -5,7 +5,7 @@ import Interfaces.ForAll;
 import Interfaces.ForGryadka;
 
 
-public abstract class Gryadka implements ForGryadka {
+public class Gryadka implements ForGryadka {
     private String name;
     private String type;
     private int count;
@@ -14,6 +14,11 @@ public abstract class Gryadka implements ForGryadka {
         this.name="грядка";
         this.count=count;
         this.type=type;
+    }
+
+    public Gryadka(int count, String type){
+        this.type=type;
+        this.count=count;
     }
 
     public void setCount(int count) {
@@ -25,7 +30,7 @@ public abstract class Gryadka implements ForGryadka {
     }
 
     public String getName() {
-        return name + " " + type;
+        return type;
     }
 
     public int getCount() {

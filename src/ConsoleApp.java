@@ -12,6 +12,5 @@ public class ConsoleApp {
         System.out.print("Грядку с каким плодом вы хотите добавить: ");
         String str = scanner.nextLine();
         System.out.println("Грядка " + str);
-
     }
 }

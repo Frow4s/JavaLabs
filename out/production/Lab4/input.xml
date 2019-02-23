@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gryadkas [
+
+        <!ELEMENT gryadka EMPTY>
+        <!ELEMENT gryadkas (gryadka+)>
+
+        <!ATTLIST gryadka
+                count CDATA #REQUIRED
+                name CDATA #REQUIRED
+                >
+        ]>
+
+<gryadkas>
+    <gryadka name="с огурцами" count="5"/>
+    <gryadka name="с помидорами" count="2"/>
+    <gryadka name="с картошкой" count="3"/>
+</gryadkas>
