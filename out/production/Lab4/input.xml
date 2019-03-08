@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Это правила, которым должен соответствовать xml файл -->
 <!DOCTYPE gryadkas [
 
         <!ELEMENT gryadka EMPTY>
@@ -10,8 +11,9 @@
                 >
         ]>
 
+<!-- Сам xml файл -->
 <gryadkas>
     <gryadka name="с огурцами" count="5"/>
     <gryadka name="с помидорами" count="2"/>
-    <gryadka name="с картошкой" count="3"/>
+    <gryadka name="с кокосом" count="3"/>
 </gryadkas>

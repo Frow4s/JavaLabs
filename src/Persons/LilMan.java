@@ -38,16 +38,16 @@ public class LilMan extends Man {
         return super.getAction();
     }
 
-    public void Making(ArrayDeque<Gryadka> gryadkas) throws Pusto{
+    public void Making(ArrayDeque<Gryadka> gryadka) throws Pusto{
 
-        while (gryadkas.peekFirst() != null) { //смотрим элемент с начала очереди
-            Gryadka current = gryadkas.pollFirst(); //извлекаем элемент с начала очереди и удаляем
+        while (gryadka.peekFirst() != null) { //смотрим элемент с начала очереди
+            Gryadka current = gryadka.pollFirst(); //извлекаем элемент с начала очереди и удаляем
             while (current.getCount() > 0) {
-                System.out.println("Собирает " + current.getName());
+                System.out.println("Собирает грядку " + current.getName());
                 current.setCount(current.getCount() - 1); // уменьшаем количество плодов на 1
             }
 
-            System.out.println(current.getName() + " закончились");
+            System.out.println("Грядки " + current.getName() + " закончились");
         }
 
         //throw new Pusto("Грядки закончились");*/

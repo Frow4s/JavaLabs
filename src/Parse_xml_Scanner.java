@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Parse_xml_Scanner {
     private static ArrayDeque<Gryadka> gryadkas = new ArrayDeque<>();
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static ArrayDeque<Gryadka> main() throws FileNotFoundException {
         Scanner scan = new Scanner(new File("src/input.xml"));
         while (scan.hasNext()) {
             String line = scan.nextLine(); //проходимся по всем линиям xml файла
@@ -25,8 +25,10 @@ public class Parse_xml_Scanner {
         scan.close();
 
         //вывод для проверки
-        for (Gryadka gryadka : gryadkas) {
+        /*for (Gryadka gryadka : gryadkas) {
             System.out.println(gryadka.getName() + " " + gryadka.getCount());
-        }
+        }*/
+
+        return gryadkas;
     }
 }

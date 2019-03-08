@@ -6,15 +6,8 @@ import Interfaces.ForGryadka;
 
 
 public class Gryadka implements ForGryadka {
-    private String name;
     private String type;
     private int count;
-
-    public Gryadka(String name, int count, String type){
-        this.name="грядка";
-        this.count=count;
-        this.type=type;
-    }
 
     public Gryadka(int count, String type){
         this.type=type;
@@ -25,9 +18,9 @@ public class Gryadka implements ForGryadka {
         this.count = count;
     }
 
-    public void setName(String name) {
+    /*public void setName(String name) {
         this.name = name;
-    }
+    }*/
 
     public String getName() {
         return type;
@@ -37,20 +30,24 @@ public class Gryadka implements ForGryadka {
         return count;
     }
 
+    public String getType() {
+        return type;
+    }
+
 
     public static class Strawberry extends Gryadka{
-        public Strawberry(String name,int count,String type){
-            super(name,count,"с клубникой");
+        public Strawberry(int count,String type){
+            super(count,"с клубникой");
         }
     }
     public static class Pomidor extends Gryadka{
-        public Pomidor(String name, int count,String type){
-            super(name,count,"с помидорами");
+        public Pomidor(int count,String type){
+            super(count,"с помидорами");
         }
     }
     public static class Cucumber extends Gryadka{
-        public Cucumber(String name,int count,String type){
-            super(name,count,"с огурцами");
+        public Cucumber(int count,String type){
+            super(count,"с огурцами");
         }
     }
 }

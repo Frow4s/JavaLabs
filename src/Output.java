@@ -13,7 +13,7 @@ public class Output {
 
     }
 
-    public void tellTheStory()  {
+    public void tellTheStory(ArrayDeque<Gryadka> gryadkas)  {
 
         /*Gryadka.Cucumber Cucumber = new Gryadka.Cucumber("213",12,"с клубникой");
         Cucumber.setCount(5);*/
@@ -29,13 +29,13 @@ public class Output {
             System.out.println(gryadka.getName() + "   " + gryadka.getCount());
         }*/
 
-        /*LilMan lilMan = new LilMan("Коротышка", Condition.NONE,Place.CucumberGryadka,"собирает");
+        LilMan lilMan = new LilMan("Коротышка", Condition.NONE,Place.CucumberGryadka,"собирает");
         System.out.println(lilMan.getAction());
         try {
-            lilMan.Making(gryadki);
+            lilMan.Making(gryadkas);
         } catch (Pusto e) {
             System.out.println(e.getMessage());
-        }*/
+        }
 
         Neznaika Neznaika=new Neznaika("Neznaika",Condition.NONE,Place.CucumberGryadka,"смотрит",2);
         System.out.println("Незнайка и Фикс появились рядом с грядками");
