@@ -6,7 +6,6 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 public class ConsoleApp {
-    String[] Commands = new String[7];
     private static ArrayDeque<Gryadka> gryadkas = new ArrayDeque<>();
 
     public static void main(String args[]) throws FileNotFoundException {
@@ -73,8 +72,9 @@ public class ConsoleApp {
                                 System.out.println("Команды не существует"); //можно прикрутить exception
     }
 
-    private static void add(Gryadka gryadka){
+    private static void add(Gryadka gryadka) throws FileNotFoundException{
         gryadkas.addLast(new Gryadka(gryadka.getCount(), gryadka.getType()));
+        To_xml_file.to_xml(gryadka);
     }
 
     private static void show(){

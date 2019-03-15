@@ -9,7 +9,8 @@ public class Parse_xml_Scanner {
     private static ArrayDeque<Gryadka> gryadkas = new ArrayDeque<>();
 
     public static ArrayDeque<Gryadka> main() throws FileNotFoundException {
-        Scanner scan = new Scanner(new File("src/input.xml"));
+        File file = new File("src/input.xml");
+        Scanner scan = new Scanner(file);
         while (scan.hasNext()) {
             String line = scan.nextLine(); //проходимся по всем линиям xml файла
 
@@ -23,11 +24,6 @@ public class Parse_xml_Scanner {
             }
         }
         scan.close();
-
-        //вывод для проверки
-        /*for (Gryadka gryadka : gryadkas) {
-            System.out.println(gryadka.getName() + " " + gryadka.getCount());
-        }*/
 
         return gryadkas;
     }
