@@ -1,3 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <gryadkas>
-    <gryadka name="в тыволмтвыло" count="4"/>
+    <gryadka name="с огурцами" count="5"/>
+    <gryadka name="с помидорами" count="2"/>
+    <gryadka name="с кокосом" count="3"/>
 </gryadkas>
