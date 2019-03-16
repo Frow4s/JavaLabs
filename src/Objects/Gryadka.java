@@ -35,19 +35,5 @@ public class Gryadka implements ForGryadka {
     }
 
 
-    public static class Strawberry extends Gryadka{
-        public Strawberry(int count,String type){
-            super(count,"с клубникой");
-        }
-    }
-    public static class Pomidor extends Gryadka{
-        public Pomidor(int count,String type){
-            super(count,"с помидорами");
-        }
-    }
-    public static class Cucumber extends Gryadka{
-        public Cucumber(int count,String type){
-            super(count,"с огурцами");
-        }
-    }
+
 }

@@ -1,11 +1,13 @@
 import Objects.Gryadka;
+import com.google.gson.Gson;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayDeque;
-import java.util.Iterator;
+import java.util.Date;
 import java.util.Scanner;
 
 public class ConsoleApp {
+    static Date time= new Date();
     private static ArrayDeque<Gryadka> gryadkas = new ArrayDeque<>();
 
     public static void main(String args[]) throws FileNotFoundException {
@@ -66,10 +68,16 @@ public class ConsoleApp {
                         if (line.equals("play")){
                             play();
                         } else
-                            if (line.equals("clear")){
+                            if (line.equals("clear")) {
                                 clear();
                             } else
-                                System.out.println("Команды не существует"); //можно прикрутить exception
+                                if (line.equals("stop")) {
+                                    System.exit(0);
+                                } else
+                                    if (words[0].equals("import")){
+                                    add(importGson.importJson(words[1]));
+                                    } else
+                                        System.out.println("Команды не существует"); //можно прикрутить exception
     }
 
     private static void add(Gryadka gryadka) throws FileNotFoundException{
