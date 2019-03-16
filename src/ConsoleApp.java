@@ -77,7 +77,12 @@ public class ConsoleApp {
                                     if (words[0].equals("import")){
                                     add(importGson.importJson(words[1]));
                                     } else
-                                        System.out.println("Команды не существует"); //можно прикрутить exception
+                                        if (words[0].equals("info")){
+                                            System.out.println("Тип:ArrayDequeue");
+                                            System.out.println("Размер очереди:"+gryadkas.size());
+                                            System.out.println("Дата инициализации:"+time);
+                                        }else
+                                            System.out.println("Команды не существует"); //можно прикрутить exception
     }
 
     private static void add(Gryadka gryadka) throws FileNotFoundException{
