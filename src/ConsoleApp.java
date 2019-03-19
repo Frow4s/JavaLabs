@@ -23,6 +23,10 @@ public class ConsoleApp {
         }
     }
 
+    /**
+     * Проигрывает сценарий
+     * @throws FileNotFoundException
+     */
     public static void play() throws FileNotFoundException{
         Output story = new Output();
         story.tellTheStory(gryadkas);
@@ -34,10 +38,7 @@ public class ConsoleApp {
 
 
         if (words[0].equals("add")) {
-            String name = words[1] + " " + words[2];
-            int count = Integer.parseInt(words[3]);
-            Gryadka gryadka = new Gryadka(count, name);
-            add(gryadka);
+            add(words[1],words[2],words[3]);
         } else
             if (words[0].equals("remove")){
                 remove(words[1],words[2],words[3]);
@@ -65,6 +66,14 @@ public class ConsoleApp {
                                         }else
                                             System.out.println("Команды не существует"); //можно прикрутить exception
     }
+
+    /**
+     * Убирает элемент из коллекции по его значению
+     * @param word1-значение элемента коллекции
+     * @param word2-значение элемента коллекции
+     * @param word3-значение элемента коллекции
+     * @throws FileNotFoundException
+     */
     public static void remove(String word1,String word2,String word3)throws FileNotFoundException{
         String name = word1 + " " + word2;
         int count = Integer.parseInt(word3);
@@ -80,6 +89,14 @@ public class ConsoleApp {
             Xml_remove.xml_remove(grr);
         }
     }
+
+    /**
+     * Убирает из коллекции все элементы меньше заданного
+     * @param word1-значение элемента коллекции
+     * @param word2-значение элемента коллекции
+     * @param word3-значение элемента коллекции
+     * @throws FileNotFoundException
+     */
     public static void remove_lower(String word1,String word2,String word3)throws FileNotFoundException{
         ArrayDeque<Gryadka> toRemove = new ArrayDeque<>();
         String name = word1 + " " + word2;
@@ -94,22 +111,51 @@ public class ConsoleApp {
             Xml_remove.xml_remove(grr);
         }
     }
+
+    /**
+     * Добавляет в коллекцию элемент из json-файла
+     * @param path-путь к json-файлу
+     * @throws FileNotFoundException
+     */
     public static void impor(String path) throws FileNotFoundException {
-        add(importGson.importJson(path));
+        gryadkas.addLast(importGson.importJson(path));
+        To_xml_file.to_xml_add(importGson.importJson(path));
     }
+
+    /**
+     *Выводит информацию о коллекции в стандартный поток вывода
+     */
     public static void info(){
         System.out.println("Тип:ArrayDequeue");
         System.out.println("Размер очереди:"+gryadkas.size());
         System.out.println("Дата инициализации:"+time);
     }
+
+    /**
+     *Останавливает работу консольного приложения
+     */
     public static void stop(){
         System.exit(0);
     }
-    public static void add(Gryadka gryadka) throws FileNotFoundException{
+
+    /**
+     * Добавляет в коллекцию грядку с введёнными параметрами
+     * @param word1-названием грядки
+     * @param word2-названием грядки
+     * @param word3-количество плодов
+     * @throws FileNotFoundException
+     */
+    public static void add(String word1,String word2,String word3) throws FileNotFoundException{
+        String name = word1 + " " + word2;
+        int count = Integer.parseInt(word3);
+        Gryadka gryadka = new Gryadka(count, name);
         gryadkas.addLast(new Gryadka(gryadka.getCount(), gryadka.getType()));
         To_xml_file.to_xml_add(gryadka);
     }
 
+    /**
+     *Показывает все элементы коллекции в строковом прелставлении
+     */
     public static void show(){
         if (gryadkas.isEmpty())
             System.out.println("Коллекция пуста!"); //можно прикрутить exception
@@ -118,7 +164,9 @@ public class ConsoleApp {
         }
     }
 
-
+    /**
+     *Очищает коллекцию
+     */
     public static void clear(){
         gryadkas.clear();
     }
