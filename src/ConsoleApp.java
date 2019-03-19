@@ -50,6 +50,9 @@ public class ConsoleApp {
                     }
                 }
                 gryadkas.removeAll(toRemove);  //решение против ошибки ConcurrentModificationException
+                for (Gryadka grr : toRemove) {
+                    Xml_remove.xml_remove(grr);
+                }
             } else
                 if (words[0].equals("remove_lower")){
                     ArrayDeque<Gryadka> toRemove = new ArrayDeque<>();
@@ -61,6 +64,9 @@ public class ConsoleApp {
                         }
                     }
                 gryadkas.removeAll(toRemove);
+                    for (Gryadka grr : toRemove) {
+                        Xml_remove.xml_remove(grr);
+                    }
                 } else
                     if (line.equals("show")){
                         show();
@@ -84,10 +90,11 @@ public class ConsoleApp {
                                         }else
                                             System.out.println("Команды не существует"); //можно прикрутить exception
     }
+    
 
     private static void add(Gryadka gryadka) throws FileNotFoundException{
         gryadkas.addLast(new Gryadka(gryadka.getCount(), gryadka.getType()));
-        To_xml_file.to_xml(gryadka);
+        To_xml_file.to_xml_add(gryadka);
     }
 
     private static void show(){
