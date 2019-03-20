@@ -36,35 +36,30 @@ public class ConsoleApp {
     private static void parse_line(String line) throws FileNotFoundException{
         String[] words = line.split(" ");
 
-
-        if (words[0].equals("add")) {
-            add(words[1],words[2],words[3]);
-        } else
-            if (words[0].equals("remove")){
-                remove(words[1],words[2],words[3]);
+        try {
+            if (words[0].equals("add")) {
+                add(words[1], words[2], words[3]);
+            } else if (words[0].equals("remove")) {
+                remove(words[1], words[2], words[3]);
+            } else if (words[0].equals("remove_lower")) {
+                remove_lower(words[1], words[2], words[3]);
+            } else if (line.equals("show")) {
+                show();
+            } else if (line.equals("play")) {
+                play();
+            } else if (line.equals("clear")) {
+                clear();
+            } else if (line.equals("stop")) {
+                stop();
+            } else if (words[0].equals("import")) {
+                impor((words[1]));
+            } else if (words[0].equals("info")) {
+                info();
             } else
-                if (words[0].equals("remove_lower")){
-                    remove_lower(words[1],words[2],words[3]);
-                } else
-                    if (line.equals("show")){
-                        show();
-                    } else
-                        if (line.equals("play")){
-                            play();
-                        } else
-                            if (line.equals("clear")) {
-                                clear();
-                            } else
-                                if (line.equals("stop")) {
-                                    stop();
-                                } else
-                                    if (words[0].equals("import")){
-                                    impor((words[1]));
-                                    } else
-                                        if (words[0].equals("info")){
-                                            info();
-                                        }else
-                                            System.out.println("Команды не существует"); //можно прикрутить exception
+                System.out.println("Команды не существует"); //можно прикрутить exception
+        } catch (Exception e){
+            System.out.println("Неверный формат команды");
+        }
     }
 
     /**

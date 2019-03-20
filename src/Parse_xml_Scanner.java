@@ -9,7 +9,7 @@ public class Parse_xml_Scanner {
     private static ArrayDeque<Gryadka> gryadkas = new ArrayDeque<>();
 
     public static ArrayDeque<Gryadka> main() throws FileNotFoundException {
-        File file = new File("src/input.xml");
+        File file = new File(System.getenv("INPUT"));
         Scanner scan = new Scanner(file);
         while (scan.hasNext()) {
             String line = scan.nextLine(); //проходимся по всем линиям xml файла
