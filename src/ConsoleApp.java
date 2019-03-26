@@ -18,7 +18,6 @@ public class ConsoleApp {
             String phrase = sc.nextLine();
             //парсер строки на команду и остальное
             parse_line(phrase);
-            //System.out.println(phrase);
 
         }
     }
@@ -27,7 +26,7 @@ public class ConsoleApp {
      * Проигрывает сценарий
      * @throws FileNotFoundException
      */
-    public static void play() throws FileNotFoundException{
+    public static void play() throws IOException {
         Output story = new Output();
         story.tellTheStory(gryadkas);
         gryadkas = Parse_xml_Scanner.main();
@@ -36,7 +35,7 @@ public class ConsoleApp {
     private static void parse_line(String line) throws IOException {
         String[] words = line.split(" ");
 
-        //try {
+        try {
             if (words[0].equals("add")) {
                 add(words[1], words[2], words[3]);
             } else if (words[0].equals("remove")) {
@@ -57,9 +56,10 @@ public class ConsoleApp {
                 info();
             } else
                 System.out.println("Команды не существует");
-        /*} catch (Exception e){
+        } catch (Exception e){
             System.out.println("Неверный формат команды");
-        }*/
+        }
+
     }
 
     /**
@@ -129,7 +129,20 @@ public class ConsoleApp {
     /**
      *Останавливает работу консольного приложения
      */
-    public static void stop(){
+    public static void stop() throws IOException {
+        //перезапись input.xml
+        File file = new File(System.getenv("INPUT"));
+        File edit = new File("src/edit.xml");
+        FileWriter fw = new FileWriter(file);
+        Scanner scanner = new Scanner(edit);
+        Scanner scanner2 = new Scanner(file);
+        while (scanner.hasNext()){
+            String linee = scanner.nextLine();
+            if (!scanner2.hasNext()){
+                fw.write(linee + "\n");
+            }
+        }
+        fw.close();
         System.exit(0);
     }
 
@@ -163,8 +176,8 @@ public class ConsoleApp {
      *Очищает коллекцию
      */
     public static void clear() throws IOException {
-        File sourceFile = new File(System.getenv("INPUT"));
-        File outputFile = new File("src/input2.xml");
+        File sourceFile = new File("src/edit.xml");
+        File outputFile = new File("src/edit2.xml");
 
         FileWriter fw = new FileWriter(outputFile);
         String importatntLine = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";

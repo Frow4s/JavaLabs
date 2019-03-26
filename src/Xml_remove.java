@@ -9,7 +9,9 @@ public class Xml_remove {
     static void xml_remove(Gryadka gryadka) throws FileNotFoundException {
         String[] lines = new String[20];
         File file = new File(System.getenv("INPUT"));
-        Scanner scan = new Scanner(file);
+        File edit = new File("src/edit.xml"); //файл, который мы изменяем
+
+        Scanner scan = new Scanner(edit);
         int i = 0;
         while (scan.hasNext()) {
             String line = scan.nextLine();
@@ -17,7 +19,7 @@ public class Xml_remove {
             i++;
         }
 
-        PrintWriter pw = new PrintWriter(System.getenv("INPUT"));
+        PrintWriter pw = new PrintWriter(edit);
         String to_remove="";
         for (String str : lines) {
             if (str != null) {

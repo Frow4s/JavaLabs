@@ -8,7 +8,8 @@ public class To_xml_file {
     static void to_xml_add(Gryadka gryadka) throws FileNotFoundException{
         String[] lines = new String[20];
         File file = new File("src/input.xml");
-        Scanner scan = new Scanner(file);
+        File edit = new File("src/edit.xml"); //файл, который мы изменяем
+        Scanner scan = new Scanner(edit);
         int i = 0;
         while (scan.hasNext()) {
             String line = scan.nextLine();
@@ -16,7 +17,7 @@ public class To_xml_file {
             i++;
         }
 
-        PrintWriter pw = new PrintWriter("src/input.xml");
+        PrintWriter pw = new PrintWriter("src/edit.xml");
         for (String str : lines) {
             if (str != null)
                 pw.println(str);
