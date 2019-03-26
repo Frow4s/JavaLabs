@@ -15,20 +15,6 @@ public class Output {
 
     public void tellTheStory(ArrayDeque<Gryadka> gryadkas)  {
 
-        /*Gryadka.Cucumber Cucumber = new Gryadka.Cucumber("213",12,"с клубникой");
-        Cucumber.setCount(5);*/
-
-        /*ArrayDeque<Gryadka> gryadki = new ArrayDeque(); //обЪявленгие коллекеции
-
-        gryadki.add(new Gryadka.Cucumber("огурцы", 5, "с огурцами")); //добавляем огурцы
-        gryadki.add(new Gryadka.Pomidor("помидоры", 2, "с помидорами")); //добавляем помидоры
-
-*/
-        //вывод всей коллекции
-        /*for (Gryadka gryadka : gryadki) {
-            System.out.println(gryadka.getName() + "   " + gryadka.getCount());
-        }*/
-
         LilMan lilMan = new LilMan("Коротышка", Condition.NONE,Place.CucumberGryadka,"собирает");
         System.out.println(lilMan.getAction());
         try {

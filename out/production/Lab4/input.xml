@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gryadkas>
-    <gryadka name="с кокосами" count="5"/>
+    <gryadka name="с огурцами" count="5"/>
 </gryadkas>
 <gryadkas>
-    <gryadka name="с огурцами" count="3"/>
+    <gryadka name="с помидрами" count="3"/>
 </gryadkas>
 <gryadkas>
-    <gryadka name="с коноплёй" count="99"/>
-</gryadkas>
-<gryadkas>
-    <gryadka name="s s" count="4"/>
+    <gryadka name="с коноплей" count="1"/>
 </gryadkas>

@@ -1,7 +1,7 @@
 import Objects.Gryadka;
 import com.google.gson.Gson;
 
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.ArrayDeque;
 import java.util.Date;
 import java.util.Scanner;
@@ -10,7 +10,7 @@ public class ConsoleApp {
     static Date time= new Date();
     private static ArrayDeque<Gryadka> gryadkas = new ArrayDeque<>();
 
-    public static void main(String args[]) throws FileNotFoundException {
+    public static void main(String args[]) throws IOException {
         gryadkas = Parse_xml_Scanner.main();
         while (true) {
             Scanner sc = new Scanner(System.in);
@@ -33,10 +33,10 @@ public class ConsoleApp {
         gryadkas = Parse_xml_Scanner.main();
     }
 
-    private static void parse_line(String line) throws FileNotFoundException{
+    private static void parse_line(String line) throws IOException {
         String[] words = line.split(" ");
 
-        try {
+        //try {
             if (words[0].equals("add")) {
                 add(words[1], words[2], words[3]);
             } else if (words[0].equals("remove")) {
@@ -56,10 +56,10 @@ public class ConsoleApp {
             } else if (words[0].equals("info")) {
                 info();
             } else
-                System.out.println("Команды не существует"); //можно прикрутить exception
-        } catch (Exception e){
+                System.out.println("Команды не существует");
+        /*} catch (Exception e){
             System.out.println("Неверный формат команды");
-        }
+        }*/
     }
 
     /**
@@ -162,7 +162,16 @@ public class ConsoleApp {
     /**
      *Очищает коллекцию
      */
-    public static void clear(){
+    public static void clear() throws IOException {
+        File sourceFile = new File(System.getenv("INPUT"));
+        File outputFile = new File("src/input2.xml");
+
+        FileWriter fw = new FileWriter(outputFile);
+        String importatntLine = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
+        fw.write(importatntLine);
+        fw.close();
+        sourceFile.delete();
+        outputFile.renameTo(sourceFile);
         gryadkas.clear();
     }
 
