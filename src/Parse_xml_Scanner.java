@@ -14,6 +14,7 @@ public class Parse_xml_Scanner {
         File file = new File(System.getenv("INPUT"));
         File edit = new File("src/edit.xml"); //файл, который мы изменяем
 
+
         Scanner scan = new Scanner(file);
         FileWriter fw = new FileWriter(edit);
         while (scan.hasNext()) {

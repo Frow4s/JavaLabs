@@ -11,6 +11,7 @@ public class ConsoleApp {
     private static ArrayDeque<Gryadka> gryadkas = new ArrayDeque<>();
 
     public static void main(String args[]) throws IOException {
+        check();
         gryadkas = Parse_xml_Scanner.main();
         while (true) {
             Scanner sc = new Scanner(System.in);
@@ -143,6 +144,9 @@ public class ConsoleApp {
             }
         }
         fw.close();
+        scanner.close();
+        scanner2.close();
+        edit.delete();
         System.exit(0);
     }
 
@@ -186,6 +190,31 @@ public class ConsoleApp {
         sourceFile.delete();
         outputFile.renameTo(sourceFile);
         gryadkas.clear();
+    }
+    public static void check() throws IOException{
+        if(new File("src/edit.xml").exists()) {
+            System.out.println("Программа была завершена некорректно,восстановить изменения?");
+            Scanner sc = new Scanner(System.in);
+            String answer = sc.nextLine();
+            if (answer.equals("yes")) {
+                //перезапись input.xml
+                File file = new File(System.getenv("INPUT"));
+                File edit = new File("src/edit.xml");
+                FileWriter fw = new FileWriter(file);
+                Scanner scanner = new Scanner(edit);
+                Scanner scanner2 = new Scanner(file);
+                while (scanner.hasNext()){
+                    String linee = scanner.nextLine();
+                    if (!scanner2.hasNext()){
+                        fw.write(linee + "\n");
+                    }
+                }
+                fw.close();
+                scanner.close();
+                scanner2.close();
+                edit.delete();
+                }
+            }
     }
 
 }
