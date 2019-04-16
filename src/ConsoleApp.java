@@ -5,10 +5,11 @@ import java.io.*;
 import java.util.ArrayDeque;
 import java.util.Date;
 import java.util.Scanner;
+import java.util.concurrent.ConcurrentLinkedDeque;
 
 public class ConsoleApp {
     static Date time= new Date();
-    private static ArrayDeque<Gryadka> gryadkas = new ArrayDeque<>();
+    private static ConcurrentLinkedDeque<Gryadka> gryadkas = new ConcurrentLinkedDeque<>();
 
     public static void main(String args[]) throws IOException {
         check();
@@ -160,8 +161,10 @@ public class ConsoleApp {
     public static void add(String word1,String word2,String word3) throws FileNotFoundException{
         String name = word1 + " " + word2;
         int count = Integer.parseInt(word3);
+        Date current_date=new Date();
         Gryadka gryadka = new Gryadka(count, name);
         gryadkas.addLast(new Gryadka(gryadka.getCount(), gryadka.getType()));
+        gryadkas.getLast().setCreateTime(current_date);
         To_xml_file.to_xml_add(gryadka);
     }
 

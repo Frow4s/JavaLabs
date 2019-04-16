@@ -7,13 +7,14 @@ import Exception.Pusto;
 import Persons.Man ;
 import Persons.Neznaika;
 import java.util.ArrayDeque;
+import java.util.concurrent.ConcurrentLinkedDeque;
 
 public class Output {
     public Output(){
 
     }
 
-    public void tellTheStory(ArrayDeque<Gryadka> gryadkas)  {
+    public void tellTheStory(ConcurrentLinkedDeque <Gryadka> gryadkas)  {
 
         LilMan lilMan = new LilMan("Коротышка", Condition.NONE,Place.CucumberGryadka,"собирает");
         System.out.println(lilMan.getAction());

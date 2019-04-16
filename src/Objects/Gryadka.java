@@ -4,10 +4,13 @@ import Enums.Place;
 import Interfaces.ForAll;
 import Interfaces.ForGryadka;
 
+import java.util.Date;
+
 
 public class Gryadka implements ForGryadka {
     private String type;
     private int count;
+    private Date CreateTime=new Date();
 
     public Gryadka(int count, String type){
         this.type=type;
@@ -33,6 +36,11 @@ public class Gryadka implements ForGryadka {
     public String getType() {
         return type;
     }
+
+    public Date getCreateTime(){return CreateTime;}
+
+    public void setCreateTime(Date date){CreateTime=date;}
+
 
 
 

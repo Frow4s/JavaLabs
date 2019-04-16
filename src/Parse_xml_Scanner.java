@@ -6,11 +6,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayDeque;
 import java.util.Scanner;
+import java.util.concurrent.ConcurrentLinkedDeque;
 
 public class Parse_xml_Scanner {
-    private static ArrayDeque<Gryadka> gryadkas = new ArrayDeque<>();
+    private static ConcurrentLinkedDeque <Gryadka> gryadkas = new ConcurrentLinkedDeque<>();
 
-    public static ArrayDeque<Gryadka> main() throws IOException {
+    public static ConcurrentLinkedDeque<Gryadka> main() throws IOException {
         File file = new File(System.getenv("INPUT"));
         File edit = new File("src/edit.xml"); //файл, который мы изменяем
 

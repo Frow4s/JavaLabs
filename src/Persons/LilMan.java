@@ -6,6 +6,7 @@ import Exception.Pusto  ;
 import Objects.Gryadka ;
 
 import java.util.ArrayDeque;
+import java.util.concurrent.ConcurrentLinkedDeque;
 
 public class LilMan extends Man {
     public LilMan(String name, Condition condition, Place place, String action) {
@@ -38,7 +39,7 @@ public class LilMan extends Man {
         return super.getAction();
     }
 
-    public void Making(ArrayDeque<Gryadka> gryadka) throws Pusto{
+    public void Making(ConcurrentLinkedDeque<Gryadka> gryadka) throws Pusto{
 
         while (gryadka.peekFirst() != null) { //смотрим элемент с начала очереди
             Gryadka current = gryadka.pollFirst(); //извлекаем элемент с начала очереди и удаляем
