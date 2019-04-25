@@ -7,3 +7,6 @@
 <gryadkas>
     <gryadka name="1 2" count="3"/>
 </gryadkas>
+<gryadkas>
+    <gryadka name="3 2" count="1"/>
+</gryadkas>
