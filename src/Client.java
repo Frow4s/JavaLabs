@@ -21,8 +21,7 @@ public class Client {
 
                 InetAddress addr = InetAddress.getLocalHost(); //адрес локального хоста, можно null или localhost
 
-                InputStream fr = new ByteArrayInputStream(phrase.getBytes()); //превращаем строку в байтовый stream чтобы отправить
-
+                InputStream fr = new ByteArrayInputStream(phrase.getBytes());//превращаем строку в байтовый stream чтобы отправить
 
                 while (fr.read(data) != -1) { //записываем
 
@@ -36,7 +35,7 @@ public class Client {
 
                 fr.close();//закрываем поток
 
-                System.out.println("Файл отправлен");
+                System.out.println("Комманда отправлена");
 
             } catch (Exception e) {
                 System.out.println("Ошибка.Попробуйте ещё раз.");
