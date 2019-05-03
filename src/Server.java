@@ -12,7 +12,7 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 
 public class Server {
     static Date time= new Date();
-    private static ConcurrentLinkedDeque<Gryadka> gryadkas = new ConcurrentLinkedDeque<>();
+    private static ConcurrentLinkedDeque<Gryadka> gryadkas = new ConcurrentLinkedDeque<>(); //Создаём потокобезопасную очередь
     public static void play() throws IOException {
         Output story = new Output();
         story.tellTheStory(gryadkas);
@@ -21,17 +21,17 @@ public class Server {
 
     public static void main(String[] args) throws Exception {
 
-        DatagramSocket s = new DatagramSocket(8033);
+        DatagramSocket s = new DatagramSocket(8033); //создаём сокет с портом по которому будем принимать команды
         System.out.println("Прием данных…");
         while (true){
 
             try { // прием файла
-                parse_line(acceptFile( 8033, 1000,s));
+                parse_line(acceptFile( 8033, 1000,s)); //парсим строку которую получили
 
 
         } catch (IOException e) {
 
-            e.printStackTrace();
+            e.printStackTrace(); //обрабатываем ошибку в теории можно убрать команду
 
         }
         }
@@ -39,24 +39,24 @@ public class Server {
     }
 
 
-    private static String acceptFile( int port, int pacSize,DatagramSocket s) throws IOException {
+    private static String acceptFile( int port, int pacSize,DatagramSocket s) throws IOException { //метод для принятия датаграммы
 
-        byte data[] = new byte[pacSize];
+        byte data[] = new byte[pacSize]; //создаём байтовый массив для данных
 
-        DatagramPacket pac = new DatagramPacket(data, data.length);
+        DatagramPacket pac = new DatagramPacket(data, data.length); //формируем пакет через который судя по всему происходит запись
 
-        ByteArrayOutputStream os = new ByteArrayOutputStream();
+        ByteArrayOutputStream os = new ByteArrayOutputStream(); //создаём байтовый поток
 
         try {
 
 
-            s.receive(pac); //получаем пакет
+            s.receive(pac); //получаем пакет по сокету и записываем
 
-            os.write(data); //записываем в виде последовательности байтов
+            os.write(data); //записываем в виде последовательности байтов в поток
 
-            os.close(); //закрываем
+            os.close(); //закрываем поток
 
-            return(os.toString().trim()); //преобразовыаем в строку
+            return(os.toString().trim()); //преобразовыаем в строку из потока байтов и обрезаем пробелы в конце строки
 
         }
         catch (Exception e){
@@ -64,6 +64,7 @@ public class Server {
         }
 
     }
+    //тут все команды из консольного приложения кроме play (он в начале)
     private static void parse_line(String line) throws IOException {
         String[] words = line.split(" ");
         try {
