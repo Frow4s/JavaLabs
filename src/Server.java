@@ -3,6 +3,7 @@ import Objects.Gryadka;
 import java.io.*;
 
 import java.net.*;
+import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
 import java.util.ArrayDeque;
 import java.util.Date;
@@ -21,12 +22,12 @@ public class Server {
 
     public static void main(String[] args) throws Exception {
 
-        DatagramSocket s = new DatagramSocket(8033); //создаём сокет с портом по которому будем принимать команды
+        DatagramSocket s = new DatagramSocket(2012); //создаём сокет с портом по которому будем принимать команды
         System.out.println("Прием данных…");
         while (true){
 
             try { // прием файла
-                parse_line(acceptFile( 8033, 1000,s)); //парсим строку которую получили
+                parse_line(acceptFile( 2012, 1000,s)); //парсим строку которую получили
 
 
         } catch (IOException e) {
@@ -89,7 +90,6 @@ public class Server {
             } else
                 System.out.println("Команды не существует");
         } catch (Exception e){
-            System.out.println("Неверный формат команды");
         }
 
     }
