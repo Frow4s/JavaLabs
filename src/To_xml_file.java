@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class To_xml_file {
 
     static void to_xml_add(Gryadka gryadka) throws FileNotFoundException{
-        String[] lines = new String[20];
+        String[] lines = new String[40];
         File file = new File("src/input.xml");
         File edit = new File("src/edit.xml"); //файл, который мы изменяем
         Scanner scan = new Scanner(edit);

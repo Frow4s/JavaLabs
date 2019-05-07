@@ -4,6 +4,7 @@ import java.io.*;
 
 import java.net.*;
 import java.nio.ByteBuffer;
+import java.nio.channels.DatagramChannel;
 import java.nio.charset.Charset;
 import java.util.ArrayDeque;
 import java.util.Date;
@@ -13,6 +14,10 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 
 public class Server {
     static Date time= new Date();
+    public static DatagramSocket socket; //создаём сокет с портом по которому будем принимать команды
+
+    public static SocketAddress client;
+
     private static ConcurrentLinkedDeque<Gryadka> gryadkas = new ConcurrentLinkedDeque<>(); //Создаём потокобезопасную очередь
     public static void play() throws IOException {
         Output story = new Output();
@@ -21,14 +26,12 @@ public class Server {
     }
 
     public static void main(String[] args) throws Exception {
-
-        DatagramSocket s = new DatagramSocket(2012); //создаём сокет с портом по которому будем принимать команды
+        socket = new DatagramSocket(2012);
         System.out.println("Прием данных…");
         while (true){
 
             try { // прием файла
-                parse_line(acceptFile( 2012, 1000,s)); //парсим строку которую получили
-
+                parse_line(acceptFile(socket)); //парсим строку которую получили
 
         } catch (IOException e) {
 
@@ -36,13 +39,12 @@ public class Server {
 
         }
         }
-
     }
 
 
-    private static String acceptFile( int port, int pacSize,DatagramSocket s) throws IOException { //метод для принятия датаграммы
+    private static String acceptFile(DatagramSocket s) throws IOException { //метод для принятия датаграммы
 
-        byte data[] = new byte[pacSize]; //создаём байтовый массив для данных
+        byte data[] = new byte[1000]; //создаём байтовый массив для данных
 
         DatagramPacket pac = new DatagramPacket(data, data.length); //формируем пакет через который судя по всему происходит запись
 
@@ -50,12 +52,13 @@ public class Server {
 
         try {
 
-
             s.receive(pac); //получаем пакет по сокету и записываем
 
-            os.write(data); //записываем в виде последовательности байтов в поток
+            client = pac.getSocketAddress();
 
-            os.close(); //закрываем поток
+            os.write(data);
+
+            os.close();
 
             return(os.toString().trim()); //преобразовыаем в строку из потока байтов и обрезаем пробелы в конце строки
 
@@ -65,6 +68,8 @@ public class Server {
         }
 
     }
+
+
     //тут все команды из консольного приложения кроме play (он в начале)
     private static void parse_line(String line) throws IOException {
         String[] words = line.split(" ");
@@ -88,12 +93,13 @@ public class Server {
             } else if (words[0].equals("info")) {
                 info();
             } else
-                System.out.println("Команды не существует");
+                write("Команды не существует");
         } catch (Exception e){
+            write("Неверный формат команды");
         }
 
     }
-    public static void remove(String word1,String word2,String word3)throws FileNotFoundException{
+    public static void remove(String word1,String word2,String word3) throws IOException {
         String name = word1 + " " + word2;
         int count = Integer.parseInt(word3);
         Gryadka gr = new Gryadka(count,name);
@@ -107,6 +113,7 @@ public class Server {
         for (Gryadka grr : toRemove) {
             Xml_remove.xml_remove(grr);
         }
+        write("Команда получена");
     }
 
     /**
@@ -116,7 +123,7 @@ public class Server {
      * @param word3-значение элемента коллекции
      * @throws FileNotFoundException
      */
-    public static void remove_lower(String word1,String word2,String word3)throws FileNotFoundException{
+    public static void remove_lower(String word1,String word2,String word3) throws IOException {
         ArrayDeque<Gryadka> toRemove = new ArrayDeque<>();
         String name = word1 + " " + word2;
         int count = Integer.parseInt(word3);
@@ -129,6 +136,7 @@ public class Server {
         for (Gryadka grr : toRemove) {
             Xml_remove.xml_remove(grr);
         }
+        write("Команда получена");
     }
 
     /**
@@ -136,18 +144,19 @@ public class Server {
      * @param path-путь к json-файлу
      * @throws FileNotFoundException
      */
-    public static void impor(String path) throws FileNotFoundException {
+    public static void impor(String path) throws IOException {
         gryadkas.addLast(importGson.importJson(path));
         To_xml_file.to_xml_add(importGson.importJson(path));
+        write("Команда получена");
     }
 
     /**
      *Выводит информацию о коллекции в стандартный поток вывода
      */
-    public static void info(){
-        System.out.println("Тип:ArrayDequeue");
-        System.out.println("Размер очереди:"+gryadkas.size());
-        System.out.println("Дата инициализации:"+time);
+    public static void info() throws IOException {
+        write("Тип:ArrayDequeue");
+        write("Размер очереди:"+gryadkas.size());
+        write("Дата инициализации:"+time);
     }
 
     /**
@@ -171,6 +180,7 @@ public class Server {
         scanner2.close();
         edit.delete();
         System.exit(0);
+        write("Команда получена");
     }
 
     /**
@@ -180,7 +190,9 @@ public class Server {
      * @param word3-количество плодов
      * @throws FileNotFoundException
      */
-    public static void add(String word1,String word2,String word3) throws FileNotFoundException{
+
+
+    public static void add(String word1,String word2,String word3) throws IOException {
         String name = word1 + " " + word2;
         int count = Integer.parseInt(word3);
         Date current_date=new Date();
@@ -188,16 +200,24 @@ public class Server {
         gryadkas.addLast(new Gryadka(gryadka.getCount(), gryadka.getType()));
         gryadkas.getLast().setCreateTime(current_date);
         To_xml_file.to_xml_add(gryadka);
+        write("Команда получена");
     }
 
     /**
      *Показывает все элементы коллекции в строковом прелставлении
      */
-    public static void show(){
+    public static void show() throws IOException {
+        String str="";
         if (gryadkas.isEmpty())
-            System.out.println("Коллекция пуста!"); //можно прикрутить exception
-        for (Gryadka gryadka : gryadkas) {
-            System.out.println(gryadka.getName() + " " + gryadka.getCount());
+            write("Коллекция пуста!"); //можно прикрутить exception
+        else {
+            for (Gryadka gryadka : gryadkas) {
+                if (gryadka == gryadkas.peekLast())
+                    str += gryadka.getName() + " " + gryadka.getCount();
+                else
+                    str += gryadka.getName() + " " + gryadka.getCount() + "\n";
+            }
+            write(str);
         }
     }
 
@@ -215,10 +235,11 @@ public class Server {
         sourceFile.delete();
         outputFile.renameTo(sourceFile);
         gryadkas.clear();
+        write("Команда получена");
     }
     public static void check() throws IOException{
         if(new File("src/edit.xml").exists()) {
-            System.out.println("Программа была завершена некорректно,восстановить изменения?");
+            write("Программа была завершена некорректно,восстановить изменения?");
             Scanner sc = new Scanner(System.in);
             String answer = sc.nextLine();
             if (answer.equals("yes")) {
@@ -240,6 +261,22 @@ public class Server {
                 edit.delete();
             }
         }
+    }
+
+    public static void write(String s) throws IOException {
+
+        Thread thread = new Thread(() -> {  //создаем отдельный поток
+            byte response[] = s.getBytes();
+
+            DatagramPacket resp = new DatagramPacket(response, response.length, client);
+
+            try {
+                socket.send(resp);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+        thread.start();
     }
 
 }

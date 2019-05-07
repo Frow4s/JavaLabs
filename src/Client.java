@@ -20,27 +20,37 @@ public class Client implements Serializable{
 
                 client.bind(null); //связываем с localhost
 
-                ByteBuffer buffer = ByteBuffer.allocate(100); //Выделяет новый буфер
+                ByteBuffer buffer = ByteBuffer.allocate(1000); //Выделяет новый буфер
                 buffer.put(phrase.getBytes()); //положили строку в буфер
                 buffer.flip();
 
                 InetSocketAddress serverAddr = new InetSocketAddress("localhost", 2012);
                 client.send(buffer, serverAddr); //отправляем поток байт на сервер
                 System.out.println("Комманда отправлена");
+
+                //прием от сервера
+                buffer.clear();
+                client.receive(buffer);
+                buffer.flip();
+
+                String response = ByteBufferToString(buffer);
+
+                System.out.println("Ответ от сервера:");
+                System.out.println(response);
+
+
             } catch (Exception e){
                 System.out.println("Ошибка.Попробуйте ещё раз.");
             }
 
 
-            /*//прием от сервера
-            buffer.clear();
-            client.receive(buffer);
-            buffer.flip();
 
-            String response = ByteBufferToString(buffer);
 
-            System.out.println("Ответ от сервера:");
-            System.out.println(response);*/
+
+
+
+
+
 
             /*try {
 

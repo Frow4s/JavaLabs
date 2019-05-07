@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Xml_remove {
     static void xml_remove(Gryadka gryadka) throws FileNotFoundException {
-        String[] lines = new String[20];
+        String[] lines = new String[40];
         File file = new File(System.getenv("INPUT"));
         File edit = new File("src/edit.xml"); //файл, который мы изменяем
 
