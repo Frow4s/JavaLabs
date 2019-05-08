@@ -6,9 +6,7 @@ import java.net.*;
 import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
 import java.nio.charset.Charset;
-import java.util.ArrayDeque;
-import java.util.Date;
-import java.util.Scanner;
+import java.util.*;
 import java.util.concurrent.ConcurrentLinkedDeque;
 
 
@@ -26,7 +24,7 @@ public class Server {
     }
 
     public static void main(String[] args) throws Exception {
-        socket = new DatagramSocket(2012);
+        socket = new DatagramSocket(2015);
         System.out.println("Прием данных…");
         while (true){
 
@@ -73,7 +71,7 @@ public class Server {
     //тут все команды из консольного приложения кроме play (он в начале)
     private static void parse_line(String line) throws IOException {
         String[] words = line.split(" ");
-        try {
+        //try {
             if (words[0].equals("add")) {
                 add(words[1], words[2], words[3]);
             } else if (words[0].equals("remove")) {
@@ -94,9 +92,9 @@ public class Server {
                 info();
             } else
                 write("Команды не существует");
-        } catch (Exception e){
+        /*} catch (Exception e){
             write("Неверный формат команды");
-        }
+        }*/
 
     }
     public static void remove(String word1,String word2,String word3) throws IOException {
@@ -208,14 +206,25 @@ public class Server {
      */
     public static void show() throws IOException {
         String str="";
+        String toClient[] = new String[gryadkas.size()];
+        int i = 0;
         if (gryadkas.isEmpty())
             write("Коллекция пуста!"); //можно прикрутить exception
         else {
             for (Gryadka gryadka : gryadkas) {
-                if (gryadka == gryadkas.peekLast())
-                    str += gryadka.getName() + " " + gryadka.getCount();
+                toClient[i] = gryadka.getName() + " " + gryadka.getCount();
+                i++;
+            }
+            Arrays.sort(toClient, new Comparator<String>() { //заменить на лямбда-выражение
+                public int compare(String o1, String o2) {
+                    return o1.toString().compareTo(o2.toString());
+                }
+            });
+            for (String s:toClient){
+                if (s.equals(toClient[gryadkas.size()-1]))
+                    str += s;
                 else
-                    str += gryadka.getName() + " " + gryadka.getCount() + "\n";
+                    str += s + "\n";
             }
             write(str);
         }
@@ -261,6 +270,24 @@ public class Server {
                 edit.delete();
             }
         }
+    }
+
+    public static void writeObject(Object obj){
+
+        Thread thread = new Thread(() -> {  //создаем отдельный поток
+            try {
+                ByteArrayOutputStream bos = new ByteArrayOutputStream();
+                ObjectOutputStream oos = new ObjectOutputStream(bos);
+                oos.writeObject(obj);
+                oos.flush();
+                byte[] response = bos.toByteArray();
+                DatagramPacket resp = new DatagramPacket(response, response.length, client);
+                socket.send(resp);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+        thread.start();
     }
 
     public static void write(String s) throws IOException {

@@ -24,7 +24,7 @@ public class Client implements Serializable{
                 buffer.put(phrase.getBytes()); //положили строку в буфер
                 buffer.flip();
 
-                InetSocketAddress serverAddr = new InetSocketAddress("localhost", 2012);
+                InetSocketAddress serverAddr = new InetSocketAddress("localhost", 2015);
                 client.send(buffer, serverAddr); //отправляем поток байт на сервер
                 System.out.println("Комманда отправлена");
 
