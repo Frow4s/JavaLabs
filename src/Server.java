@@ -25,6 +25,7 @@ public class Server {
 
     public static void main(String[] args) throws Exception {
         socket = new DatagramSocket(2015);
+        //check();
         System.out.println("Прием данных…");
         while (true){
 
@@ -90,6 +91,8 @@ public class Server {
                 impor((words[1]));
             } else if (words[0].equals("info")) {
                 info();
+            } else if (line.equals("check")) {
+                check();
             } else
                 write("Команды не существует");
         /*} catch (Exception e){
@@ -249,8 +252,7 @@ public class Server {
     public static void check() throws IOException{
         if(new File("src/edit.xml").exists()) {
             write("Программа была завершена некорректно,восстановить изменения?");
-            Scanner sc = new Scanner(System.in);
-            String answer = sc.nextLine();
+            String answer = acceptFile(socket);
             if (answer.equals("yes")) {
                 //перезапись input.xml
                 File file = new File(System.getenv("INPUT"));
@@ -268,8 +270,14 @@ public class Server {
                 scanner.close();
                 scanner2.close();
                 edit.delete();
+                write("Данные востановлены.");
+            } else {
+                write("Данные не востановлены.");
             }
+        } else {
+            write("Программа была завершена корректно");
         }
+        gryadkas = Parse_xml_Scanner.main();
     }
 
     public static void writeObject(Object obj){
