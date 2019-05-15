@@ -3,7 +3,9 @@ import java.io.*;
 import java.net.*;
 import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
+import java.util.Date;
 import java.util.Scanner;
+import java.util.Timer;
 import java.util.stream.*;
 
 
@@ -83,9 +85,22 @@ public class Client implements Serializable{
 
             //прием от сервера
             buffer.clear();
+            Runnable check=()->{
+                Long curtime=System.currentTimeMillis();
+                try {
+                    while (System.currentTimeMillis() < curtime + 2000) {
+                    }
+                    System.out.println("ШОТА НЕ ТО С СЕРВЕРОМ");
+                    client.close();
+                } catch (Exception e){
+                    System.out.println("OOPs");
+                }
+            };
+            Thread thread1 = new Thread(check);
+            thread1.start();
             client.receive(buffer);
+            thread1.stop();
             buffer.flip();
-
             String response = ByteBufferToString(buffer);
 
             System.out.println("Ответ от сервера:");
