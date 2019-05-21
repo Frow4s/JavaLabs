@@ -87,6 +87,7 @@ public class Client implements Serializable{
             buffer.clear();
             Runnable check=()->{
                 Long curtime=System.currentTimeMillis();
+                Thread ThisThread=Thread.currentThread();
                 try {
                     while (System.currentTimeMillis() < curtime + 2000) {
                     }
@@ -95,6 +96,7 @@ public class Client implements Serializable{
                 } catch (Exception e){
                     System.out.println("OOPs");
                 }
+
             };
             Thread thread1 = new Thread(check);
             thread1.start();
@@ -102,7 +104,6 @@ public class Client implements Serializable{
             thread1.stop();
             buffer.flip();
             String response = ByteBufferToString(buffer);
-
             System.out.println("Ответ от сервера:");
             System.out.println(response);
 

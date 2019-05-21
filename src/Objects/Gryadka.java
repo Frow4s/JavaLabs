@@ -1,8 +1,8 @@
 package Objects;
 
-import Enums.Place;
-import Interfaces.ForAll;
+
 import Interfaces.ForGryadka;
+import java.time.LocalDateTime;
 
 import java.util.Date;
 
@@ -10,7 +10,7 @@ import java.util.Date;
 public class Gryadka implements ForGryadka {
     private String type;
     private int count;
-    private Date CreateTime=new Date();
+    private LocalDateTime CreateTime=LocalDateTime.now();
 
     public Gryadka(int count, String type){
         this.type=type;
@@ -37,9 +37,9 @@ public class Gryadka implements ForGryadka {
         return type;
     }
 
-    public Date getCreateTime(){return CreateTime;}
+    public LocalDateTime getCreateTime(){return CreateTime;}
 
-    public void setCreateTime(Date date){CreateTime=date;}
+    public void setCreateTime(LocalDateTime date){CreateTime=date;}
 
 
 

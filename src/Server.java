@@ -6,12 +6,13 @@ import java.net.*;
 import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
 import java.nio.charset.Charset;
+import java.time.LocalDateTime;
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedDeque;
 
 
 public class Server {
-    static Date time= new Date();
+    static LocalDateTime time=LocalDateTime.now();
     public static DatagramSocket socket; //создаём сокет с портом по которому будем принимать команды
 
     public static SocketAddress client;
@@ -26,7 +27,7 @@ public class Server {
     public static void main(String[] args) throws Exception {
         socket = new DatagramSocket(2015);
         //check();
-        System.out.println("Прием данных…");
+        System.err.println("Прием данных…");
         while (true){
 
             try { // прием файла
@@ -155,9 +156,7 @@ public class Server {
      *Выводит информацию о коллекции в стандартный поток вывода
      */
     public static void info() throws IOException {
-        write("Тип:ArrayDequeue");
-        write("Размер очереди:"+gryadkas.size());
-        write("Дата инициализации:"+time);
+        write("Тип:ArrayDequeue"+"\n"+"Размер очереди:"+gryadkas.size()+"\n"+"Дата инициализации:"+time);
     }
 
     /**
@@ -180,8 +179,8 @@ public class Server {
         scanner.close();
         scanner2.close();
         edit.delete();
+        write("Сервер закрыт");
         System.exit(0);
-        write("Команда получена");
     }
 
     /**
@@ -196,10 +195,9 @@ public class Server {
     public static void add(String word1,String word2,String word3) throws IOException {
         String name = word1 + " " + word2;
         int count = Integer.parseInt(word3);
-        Date current_date=new Date();
         Gryadka gryadka = new Gryadka(count, name);
         gryadkas.addLast(new Gryadka(gryadka.getCount(), gryadka.getType()));
-        gryadkas.getLast().setCreateTime(current_date);
+        gryadkas.getLast().setCreateTime(LocalDateTime.now());
         To_xml_file.to_xml_add(gryadka);
         write("Команда получена");
     }

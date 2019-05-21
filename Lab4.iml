@@ -16,5 +16,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" exported="" name="postgresql-42.2.5" level="project" />
   </component>
 </module>
