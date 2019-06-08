@@ -1,5 +1,6 @@
 import Objects.Gryadka;
 
+import javax.mail.MessagingException;
 import java.io.*;
 
 import java.net.*;
@@ -12,6 +13,7 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 
 
 public class Server {
+
     static LocalDateTime time=LocalDateTime.now();
     public static DatagramSocket socket; //создаём сокет с портом по которому будем принимать команды
 
@@ -25,7 +27,7 @@ public class Server {
     }
 
     public static void main(String[] args) throws Exception {
-        socket = new DatagramSocket(2015);
+        socket = new DatagramSocket(2016);
         //check();
         System.err.println("Прием данных…");
         while (true){
@@ -71,9 +73,10 @@ public class Server {
 
 
     //тут все команды из консольного приложения кроме play (он в начале)
-    private static void parse_line(String line) throws IOException {
+    private static void parse_line(String line) throws IOException, MessagingException {
+        Func theFunc = new Func();
         String[] words = line.split(" ");
-        //try {
+        try {
             if (words[0].equals("add")) {
                 add(words[1], words[2], words[3]);
             } else if (words[0].equals("remove")) {
@@ -94,13 +97,19 @@ public class Server {
                 info();
             } else if (line.equals("check")) {
                 check();
+            } else if (words[0].equals("sign_up")) {
+                write(theFunc.sign_up(line));
+            } else if (words[0].equals("login")) {
+                write(theFunc.login(line));
             } else
                 write("Команды не существует");
-        /*} catch (Exception e){
+        } catch (Exception e){
             write("Неверный формат команды");
-        }*/
+        }
 
     }
+
+
     public static void remove(String word1,String word2,String word3) throws IOException {
         String name = word1 + " " + word2;
         int count = Integer.parseInt(word3);

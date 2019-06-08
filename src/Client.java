@@ -79,7 +79,7 @@ public class Client implements Serializable{
             buffer.put(phrase.getBytes()); //положили строку в буфер
             buffer.flip();
 
-            InetSocketAddress serverAddr = new InetSocketAddress("localhost", 2015);
+            InetSocketAddress serverAddr = new InetSocketAddress("localhost", 2016);
             client.send(buffer, serverAddr); //отправляем поток байт на сервер
             System.out.println("Комманда отправлена");
 
@@ -89,7 +89,7 @@ public class Client implements Serializable{
                 Long curtime=System.currentTimeMillis();
                 Thread ThisThread=Thread.currentThread();
                 try {
-                    while (System.currentTimeMillis() < curtime + 2000) {
+                    while (System.currentTimeMillis() < curtime + 8000) {
                     }
                     System.out.println("ШОТА НЕ ТО С СЕРВЕРОМ");
                     client.close();

@@ -6,9 +6,9 @@ import java.sql.SQLException;
 public class JDBCPostgreSQLExample {
 
     //  Database credentials
-    static final String DB_URL = "jdbc:postgresql://127.0.0.1:5432/testdb";
+    static final String DB_URL = "jdbc:postgresql://127.0.0.1:5432/users";
     static final String USER = "postgres";
-    static final String PASS = "123";
+    static final String PASS = "1";
 
     public static void main(String[] argv) {
 
