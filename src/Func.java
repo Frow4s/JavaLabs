@@ -165,10 +165,25 @@ public class Func {
     }
     public String remove(String text,String user){
         String[] arraytext = text.split(" ");
-        String flag = "*правильный ввод*";
+        String flag = "Грядка удалена";
         DataBaseHandler dataBaseHandler = new DataBaseHandler();
-        dataBaseHandler.remove(arraytext[1],arraytext[2],user);
+        try {
+            dataBaseHandler.remove(arraytext[1],arraytext[2],user);
+        } catch (Exception e){
+            flag="Ошибка удаления грядки";
+        }
+
         return flag;
     }
-
+    public String show(String user){
+        String flag;
+        DataBaseHandler dataBaseHandler= new DataBaseHandler();
+        try{
+            flag=dataBaseHandler.show(user);
+        }
+        catch (Exception e){
+            flag="Ошибка";
+        }
+        return flag;
+    }
 }

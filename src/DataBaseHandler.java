@@ -151,7 +151,6 @@ public class DataBaseHandler extends Configs {
     }
     public void remove(String name,String count,String user_login){
         String remove = "DELETE FROM " + Const.GRYADKI_TABLE +" WHERE "+Const.GRYADKI_NAME + "=? AND " + Const.GRYADKI_COUNT + "=? "+ "AND " + Const.GRYADKI_CREATOR + "=?";
-        System.out.println(remove);
         try {
             PreparedStatement prSt = getDbconnection().prepareStatement(remove);
             prSt.setString(1, name);
@@ -162,6 +161,27 @@ public class DataBaseHandler extends Configs {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
+        }
+    }
+    public String show(String user_login){
+        String collection="";
+        String show="SELECT * FROM "+Const.GRYADKI_TABLE+" WHERE "+Const.GRYADKI_CREATOR+"=?";
+        try {
+            PreparedStatement prSt=getDbconnection().prepareStatement(show);
+            prSt.setString(1,user_login);
+            ResultSet res=prSt.executeQuery();
+            while (res.next()){
+                String str=res.getString("gryadka")+" "+res.getString("number");
+                collection=str+"\n";
+            }
+       }catch (Exception e){
+            System.out.println("Ошибка вывода коллекции");
+            System.out.println(e);
+        }
+        if(collection.equals("")){
+            return("Коллекция пуста");
+        }else{
+            return collection;
         }
     }
 }
