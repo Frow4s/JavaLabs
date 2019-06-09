@@ -83,11 +83,10 @@ public class Server {
                 write(theFunc.add(line, enter_user));
             } else if (words[0].equals("remove")) {
                 write(theFunc.remove(line,enter_user));
-//                remove(words[1], words[2], words[3]);
             } else if (words[0].equals("remove_lower")) {
                 remove_lower(words[1], words[2], words[3]);
             } else if (line.equals("show")) {
-                show();
+                write(theFunc.show(enter_user));
             } else if (line.equals("play")) {
                 play();
             } else if (line.equals("clear")) {

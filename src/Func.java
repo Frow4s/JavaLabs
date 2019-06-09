@@ -143,8 +143,6 @@ public class Func {
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }
-                    System.out.println(row_counter);
-                    System.out.println(row_counter_ah);
                     if (row_counter_ah == 0) {
                         dataBaseHandler.add_gryadka(arraytext[1], arraytext[2], user);
                         flag = "*Грядка добавлена*";
@@ -165,12 +163,31 @@ public class Func {
     }
     public String remove(String text,String user){
         String[] arraytext = text.split(" ");
-        String flag = "Грядка удалена";
+        String flag = "*Грядка удалена*";
         DataBaseHandler dataBaseHandler = new DataBaseHandler();
         try {
-            dataBaseHandler.remove(arraytext[1],arraytext[2],user);
+            ResultSet resultSet = dataBaseHandler.isConsist(arraytext[1],arraytext[2]);
+            ResultSet resultSet2 = dataBaseHandler.isObjectUser(arraytext[1],arraytext[2], user);
+            int row_counter = 0;
+            int row_counter2 = 0;
+            try {
+                while (resultSet.next()) {
+                    row_counter++;
+                }
+                while (resultSet2.next()) {
+                    row_counter2++;
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            if (row_counter == 0){
+                flag = "*Такого объекта не существует*";
+            } else if (row_counter2 == 0){
+                flag = "*Вы не имеете права изменять чужие объекты*";
+            } else
+                dataBaseHandler.remove(arraytext[1],arraytext[2],user);
         } catch (Exception e){
-            flag="Ошибка удаления грядки";
+            flag="*Ошибка удаления грядки*";
         }
 
         return flag;
@@ -182,7 +199,7 @@ public class Func {
             flag=dataBaseHandler.show(user);
         }
         catch (Exception e){
-            flag="Ошибка";
+            flag="*Ошибка*";
         }
         return flag;
     }
