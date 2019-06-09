@@ -82,7 +82,8 @@ public class Server {
             if (words[0].equals("add")) {
                 write(theFunc.add(line, enter_user));
             } else if (words[0].equals("remove")) {
-                remove(words[1], words[2], words[3]);
+                write(theFunc.remove(line,enter_user));
+//                remove(words[1], words[2], words[3]);
             } else if (words[0].equals("remove_lower")) {
                 remove_lower(words[1], words[2], words[3]);
             } else if (line.equals("show")) {

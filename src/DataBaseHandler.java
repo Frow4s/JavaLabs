@@ -149,4 +149,19 @@ public class DataBaseHandler extends Configs {
 
         return resultSet;
     }
+    public void remove(String name,String count,String user_login){
+        String remove = "DELETE FROM " + Const.GRYADKI_TABLE +" WHERE "+Const.GRYADKI_NAME + "=? AND " + Const.GRYADKI_COUNT + "=? "+ "AND " + Const.GRYADKI_CREATOR + "=?";
+        System.out.println(remove);
+        try {
+            PreparedStatement prSt = getDbconnection().prepareStatement(remove);
+            prSt.setString(1, name);
+            prSt.setString(2, count);
+            prSt.setString(3, user_login);
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 }

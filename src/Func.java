@@ -5,6 +5,7 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.io.*;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
@@ -75,13 +76,13 @@ public class Func {
             properties.load(new FileInputStream("src/mail.properties"));
             Session mailSession = Session.getDefaultInstance(properties);
             MimeMessage message = new MimeMessage(mailSession);
-            message.setFrom(new InternetAddress("nikisim2000@gmail.com"));
+            message.setFrom(new InternetAddress("olicras254@gmail.com"));
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(Email));
             message.setSubject("Your new password");
             message.setText(Password);
 
             Transport transport = mailSession.getTransport();
-            transport.connect("nikisim2000@gmail.com","ТВОЙ ПАРОЛЬ");
+            transport.connect("olicras254@gmail.com","5zcjrjggu33Jkv5");
             try {
                 transport.sendMessage(message,message.getAllRecipients());
                 transport.close();
@@ -160,7 +161,13 @@ public class Func {
             flag = "*Неправильный ввод*";
 
         }
-        System.out.println(flag);
+        return flag;
+    }
+    public String remove(String text,String user){
+        String[] arraytext = text.split(" ");
+        String flag = "*правильный ввод*";
+        DataBaseHandler dataBaseHandler = new DataBaseHandler();
+        dataBaseHandler.remove(arraytext[1],arraytext[2],user);
         return flag;
     }
 
