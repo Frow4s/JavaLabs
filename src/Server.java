@@ -14,6 +14,8 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 
 public class Server {
 
+    static String enter_user;
+
     static LocalDateTime time=LocalDateTime.now();
     public static DatagramSocket socket; //создаём сокет с портом по которому будем принимать команды
 
@@ -33,7 +35,7 @@ public class Server {
         while (true){
 
             try { // прием файла
-                parse_line(acceptFile(socket)); //парсим строку которую получили
+                parse_line(acceptFile(socket), enter_user); //парсим строку которую получили
 
         } catch (IOException e) {
 
@@ -73,12 +75,12 @@ public class Server {
 
 
     //тут все команды из консольного приложения кроме play (он в начале)
-    private static void parse_line(String line) throws IOException, MessagingException {
+    private static void parse_line(String line, String user) throws IOException, MessagingException {
         Func theFunc = new Func();
         String[] words = line.split(" ");
-        try {
+        //try {
             if (words[0].equals("add")) {
-                add(words[1], words[2], words[3]);
+                write(theFunc.add(line, enter_user));
             } else if (words[0].equals("remove")) {
                 remove(words[1], words[2], words[3]);
             } else if (words[0].equals("remove_lower")) {
@@ -101,11 +103,12 @@ public class Server {
                 write(theFunc.sign_up(line));
             } else if (words[0].equals("login")) {
                 write(theFunc.login(line));
+                enter_user = theFunc.getLogin();
             } else
                 write("Команды не существует");
-        } catch (Exception e){
+        /*} catch (Exception e){
             write("Неверный формат команды");
-        }
+        }*/
 
     }
 
@@ -201,7 +204,7 @@ public class Server {
      */
 
 
-    public static void add(String word1,String word2,String word3) throws IOException {
+    /*public static void add(String word1,String word2,String word3) throws IOException {
         String name = word1 + " " + word2;
         int count = Integer.parseInt(word3);
         Gryadka gryadka = new Gryadka(count, name);
@@ -209,7 +212,7 @@ public class Server {
         gryadkas.getLast().setCreateTime(LocalDateTime.now());
         To_xml_file.to_xml_add(gryadka);
         write("Команда получена");
-    }
+    }*/
 
     /**
      *Показывает все элементы коллекции в строковом прелставлении

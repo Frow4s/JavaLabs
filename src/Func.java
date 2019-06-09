@@ -14,6 +14,11 @@ import java.util.Properties;
 public class Func {
     String enter_user;
 
+
+    public String getLogin (){
+        return enter_user;
+    }
+
     public String login (String text) {
         String[] arraytext = text.split(" ");
         String flag = "*Вход прошел успешно*";
@@ -35,6 +40,7 @@ public class Func {
             e.printStackTrace();
         }
         if (counter >= 1) {
+            System.out.println(enter_user);
             return flag;
         } else {
             return "*Неправильный логин или пароль*";
@@ -75,7 +81,7 @@ public class Func {
             message.setText(Password);
 
             Transport transport = mailSession.getTransport();
-            transport.connect("СЮДА СВОЮ ПОЧТУ","СЮДА СВОЙ ПАРОЛЬ ОТ ПОЧТЫ");
+            transport.connect("nikisim2000@gmail.com","ТВОЙ ПАРОЛЬ");
             try {
                 transport.sendMessage(message,message.getAllRecipients());
                 transport.close();
@@ -107,6 +113,55 @@ public class Func {
         String saltStr = salt.toString();
         return saltStr;
 
+    }
+
+    public String add(String text, String user) {
+        String[] arraytext = text.split(" ");
+        String flag = "*Неправильный ввод*";
+        DataBaseHandler dataBaseHandler = new DataBaseHandler();
+        if (arraytext.length == 3){
+            String name = arraytext[1] + " " + arraytext[2];
+            try {
+            System.out.println(user);
+                if (user == null) {
+                    flag = "*Вы не вошли в систему*";
+                    System.out.println(flag);
+                    return flag;
+                } else {
+                    ResultSet resultSet = dataBaseHandler.getGryadka(user);
+                    ResultSet resultSet2 = dataBaseHandler.already_have(arraytext[1], arraytext[2]);
+                    int row_counter = 0;
+                    int row_counter_ah = 0;
+                    try {
+                        while (resultSet.next()) {
+                            row_counter++;
+                        }
+                        while (resultSet2.next()) {
+                            row_counter_ah++;
+                        }
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println(row_counter);
+                    System.out.println(row_counter_ah);
+                    if (row_counter_ah == 0) {
+                        dataBaseHandler.add_gryadka(arraytext[1], arraytext[2], user);
+                        flag = "*Грядка добавлена*";
+                    }
+                    else if (row_counter_ah == 1){
+                        flag = "*Такая грядка уже существует*";
+                    }
+                }
+            } catch (Exception ex) {
+                System.err.println("Неправильный ввод");
+            }
+        }
+        else{
+            flag = "*Неправильный ввод*";
+
+        }
+        System.out.println(flag);
+        return flag;
     }
 
 }

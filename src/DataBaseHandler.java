@@ -94,4 +94,59 @@ public class DataBaseHandler extends Configs {
         return resultSet;
     }
 
+    public void add_gryadka(String name, String count, String user_login){
+        String insert = "INSERT INTO " + Const.GRYADKI_TABLE + "(" +
+                Const.GRYADKI_CREATOR + "," +
+                Const.GRYADKI_NAME + "," +
+                Const.GRYADKI_COUNT + ")" +
+                "VALUES(?,?,?)";
+        try {
+            PreparedStatement prSt = getDbconnection().prepareStatement(insert);
+            prSt.setString(1, user_login);
+            prSt.setString(2, name);
+            prSt.setString(3, count);
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public ResultSet getGryadka(String user_login){
+        ResultSet resultSet = null;
+
+        String select = "SELECT * FROM " + Const.GRYADKI_TABLE + " WHERE " +
+                Const.GRYADKI_CREATOR + "=?";
+        try {
+            PreparedStatement prSt = getDbconnection().prepareStatement(select);
+            prSt.setString(1, user_login);
+            resultSet = prSt.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return resultSet;
+    }
+
+    public ResultSet already_have(String gryadka, String count) {
+        ResultSet resultSet = null;
+
+        String select = "SELECT * FROM " + Const.GRYADKI_TABLE + " WHERE " +
+                Const.GRYADKI_NAME + "=? AND " + Const.GRYADKI_COUNT + "=?";
+        try {
+            PreparedStatement prSt = getDbconnection().prepareStatement(select);
+            prSt.setString(1, gryadka);
+            prSt.setString(2, count);
+            resultSet = prSt.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return resultSet;
+    }
 }
