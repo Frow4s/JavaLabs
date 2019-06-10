@@ -207,6 +207,7 @@ public class DataBaseHandler extends Configs {
             e.printStackTrace();
         }
     }
+
     public String show(String user_login){
         String collection="";
         String show="SELECT * FROM " + Const.GRYADKI_TABLE;
@@ -237,19 +238,21 @@ public class DataBaseHandler extends Configs {
         }
      return("Коллекция очищена");
     }
+
     public String remove_lower(String count,String user_login){
-        String remove_lower="DELETE FROM "+Const.GRYADKI_TABLE+" WHERE "+Const.GRYADKI_CREATOR+"=?"+" AND "+Const.GRYADKI_COUNT+" < ? ";
-        System.out.println(remove_lower);
+        String remove_lower="DELETE FROM " + Const.GRYADKI_TABLE+" WHERE ("+Const.GRYADKI_COUNT+"<?) AND ("+Const.GRYADKI_CREATOR+"=?)";
         try{
             PreparedStatement prSt=getDbconnection().prepareStatement(remove_lower);
-            prSt.setString(1,user_login);
-            prSt.setString(2,count);
+            prSt.setString(1,count);
+            prSt.setString(2,user_login);
             System.out.println(prSt.toString());
+            prSt.executeUpdate();
         } catch (Exception e){
-            return("Ошибка удаления"+"\n"+e);
+            return("*Ошибка удаления*"+"\n"+e);
         }
-        return("Элементы удалены");
+        return("*Элементы удалены*");
     }
+
     public ConcurrentLinkedDeque gryadki(String user_login){
         ConcurrentLinkedDeque<Gryadka> gryadkas = new ConcurrentLinkedDeque<>();
         String collection="";
@@ -262,7 +265,7 @@ public class DataBaseHandler extends Configs {
                 gryadkas.addLast(new Gryadka(Integer.parseInt(res.getString("number")),res.getString("gryadka")));
             }
         } catch (Exception e){
-            System.out.println("Ошибка грядок  "+e);
+            System.out.println("*Ошибка грядок*  "+e);
         }
         return gryadkas;
     }

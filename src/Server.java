@@ -80,7 +80,7 @@ public class Server {
     private static void parse_line(String line, String user) throws Exception {
         Func theFunc = new Func();
         String[] words = line.split(" ");
-        //try {
+        try {
             if (words[0].equals("add")) {
                 write(theFunc.add(line, enter_user));
             } else if (words[0].equals("remove")) {
@@ -105,12 +105,15 @@ public class Server {
                 write(theFunc.sign_up(line));
             } else if (words[0].equals("login")) {
                 write(theFunc.login(line));
-                enter_user = theFunc.getLogin();
+                if (theFunc.login(line).equals("*Неправильный логин или пароль*")){
+                    enter_user = null;
+                } else
+                    enter_user = theFunc.getLogin();
             } else
                 write("Команды не существует");
-        /*} catch (Exception e){
+        } catch (Exception e){
             write("Неверный формат команды");
-        }*/
+        }
 
     }
 
