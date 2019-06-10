@@ -41,7 +41,6 @@ public class Func {
             e.printStackTrace();
         }
         if (counter >= 1) {
-            System.out.println(enter_user);
             return flag;
         } else {
             return "*Неправильный логин или пароль*";
@@ -123,7 +122,6 @@ public class Func {
         if (arraytext.length == 3){
             String name = arraytext[1] + " " + arraytext[2];
             try {
-            System.out.println(user);
                 if (user == null) {
                     flag = "*Вы не вошли в систему*";
                     System.out.println(flag);
@@ -183,5 +181,22 @@ public class Func {
             flag="*Ошибка*";
         }
         return flag;
+    }
+    public String clear(String user){
+        DataBaseHandler dataBaseHandler=new DataBaseHandler();
+        try{
+            return(dataBaseHandler.clear(user));
+        }catch(Exception e){
+            return("Error");
+        }
+    }
+    public String remove_lower(String line,String enter_user){
+        String [] arraytext =line.split(" ");
+        DataBaseHandler dataBaseHandler=new DataBaseHandler();
+        try{
+            return(dataBaseHandler.remove_lower(arraytext[1],enter_user));
+        } catch (Exception e){
+            return("Error");
+        }
     }
 }

@@ -22,10 +22,12 @@ public class Server {
     public static SocketAddress client;
 
     private static ConcurrentLinkedDeque<Gryadka> gryadkas = new ConcurrentLinkedDeque<>(); //Создаём потокобезопасную очередь
-    public static void play() throws IOException {
+    public static String  play() throws Exception {
+        DataBaseHandler db=new DataBaseHandler();
         Output story = new Output();
-        story.tellTheStory(gryadkas);
         gryadkas = Parse_xml_Scanner.main();
+        return(story.tellTheStory(db.gryadki(enter_user)));
+
     }
 
     public static void main(String[] args) throws Exception {
@@ -48,7 +50,7 @@ public class Server {
 
     private static String acceptFile(DatagramSocket s) throws IOException { //метод для принятия датаграммы
 
-        byte data[] = new byte[1000]; //создаём байтовый массив для данных
+        byte data[] = new byte[10000]; //создаём байтовый массив для данных
 
         DatagramPacket pac = new DatagramPacket(data, data.length); //формируем пакет через который судя по всему происходит запись
 
@@ -75,7 +77,7 @@ public class Server {
 
 
     //тут все команды из консольного приложения кроме play (он в начале)
-    private static void parse_line(String line, String user) throws IOException, MessagingException {
+    private static void parse_line(String line, String user) throws Exception {
         Func theFunc = new Func();
         String[] words = line.split(" ");
         //try {
@@ -84,13 +86,13 @@ public class Server {
             } else if (words[0].equals("remove")) {
                 write(theFunc.remove(line,enter_user));
             } else if (words[0].equals("remove_lower")) {
-                remove_lower(words[1], words[2], words[3]);
+                write(theFunc.remove_lower(line,enter_user));
             } else if (line.equals("show")) {
                 write(theFunc.show(enter_user));
             } else if (line.equals("play")) {
-                play();
+                write(play());
             } else if (line.equals("clear")) {
-                clear();
+                write(theFunc.clear(enter_user));
             } else if (line.equals("stop")) {
                 stop();
             } else if (words[0].equals("import")) {
@@ -168,7 +170,7 @@ public class Server {
      *Выводит информацию о коллекции в стандартный поток вывода
      */
     public static void info() throws IOException {
-        write("Тип:ArrayDequeue"+"\n"+"Размер очереди:"+gryadkas.size()+"\n"+"Дата инициализации:"+time);
+        write("Тип:ArrayDequeue"+"\n"+"Пользователь:"+enter_user);
     }
 
     /**

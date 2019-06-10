@@ -1,3 +1,5 @@
+import Objects.Gryadka;
+
 import javax.mail.internet.MimeMessage;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
@@ -5,6 +7,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.ResultSet;
+import java.util.SortedMap;
+import java.util.concurrent.ConcurrentLinkedDeque;
 
 
 //Collable statement узнать!!!!
@@ -221,5 +225,45 @@ public class DataBaseHandler extends Configs {
         }else{
             return collection;
         }
+    }
+    public String clear(String user_login){
+        String clear=" DELETE FROM "+Const.GRYADKI_TABLE+" WHERE "+Const.GRYADKI_CREATOR+"=?";
+        try{
+            PreparedStatement prSt=getDbconnection().prepareStatement(clear);
+            prSt.setString(1,user_login);
+            prSt.executeUpdate();
+        }catch (Exception e){
+            return("Ошибка удаления коллекции");
+        }
+     return("Коллекция очищена");
+    }
+    public String remove_lower(String count,String user_login){
+        String remove_lower="DELETE FROM "+Const.GRYADKI_TABLE+" WHERE "+Const.GRYADKI_CREATOR+"=?"+" AND "+Const.GRYADKI_COUNT+" < ? ";
+        System.out.println(remove_lower);
+        try{
+            PreparedStatement prSt=getDbconnection().prepareStatement(remove_lower);
+            prSt.setString(1,user_login);
+            prSt.setString(2,count);
+            System.out.println(prSt.toString());
+        } catch (Exception e){
+            return("Ошибка удаления"+"\n"+e);
+        }
+        return("Элементы удалены");
+    }
+    public ConcurrentLinkedDeque gryadki(String user_login){
+        ConcurrentLinkedDeque<Gryadka> gryadkas = new ConcurrentLinkedDeque<>();
+        String collection="";
+        String show="SELECT * FROM " + Const.GRYADKI_TABLE+" WHERE "+Const.GRYADKI_CREATOR+"=?";
+        try{
+            PreparedStatement prSt=getDbconnection().prepareStatement(show);
+            prSt.setString(1,user_login);
+            ResultSet res=prSt.executeQuery();
+            while(res.next()){
+                gryadkas.addLast(new Gryadka(Integer.parseInt(res.getString("number")),res.getString("gryadka")));
+            }
+        } catch (Exception e){
+            System.out.println("Ошибка грядок  "+e);
+        }
+        return gryadkas;
     }
 }

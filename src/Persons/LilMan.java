@@ -39,18 +39,18 @@ public class LilMan extends Man {
         return super.getAction();
     }
 
-    public void Making(ConcurrentLinkedDeque<Gryadka> gryadka) throws Pusto{
-
+    public String Making(ConcurrentLinkedDeque<Gryadka> gryadka) throws Pusto{
+        String out="";
         while (gryadka.peekFirst() != null) { //смотрим элемент с начала очереди
             Gryadka current = gryadka.pollFirst(); //извлекаем элемент с начала очереди и удаляем
             while (current.getCount() > 0) {
-                System.out.println("Собирает грядку " + current.getName());
+                out=out+"Собирает грядку " + current.getName()+"\n";
                 current.setCount(current.getCount() - 1); // уменьшаем количество плодов на 1
             }
 
-            System.out.println("Грядки " + current.getName() + " закончились");
+            out=out+"Грядки " + current.getName() + " закончились"+"\n";
         }
-
+        return out;
         //throw new Pusto("Грядки закончились");*/
     }
 }

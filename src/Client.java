@@ -36,7 +36,7 @@ public class Client implements Serializable{
 
             client.bind(null); //связываем с localhost
 
-            ByteBuffer buffer = ByteBuffer.allocate(1000); //Выделяет новый буфер
+            ByteBuffer buffer = ByteBuffer.allocate(10000); //Выделяет новый буфер
             buffer.put(phrase.getBytes()); //положили строку в буфер
             buffer.flip();
 
