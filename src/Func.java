@@ -129,28 +129,9 @@ public class Func {
                     System.out.println(flag);
                     return flag;
                 } else {
-                    ResultSet resultSet = dataBaseHandler.getGryadka(user);
-                    ResultSet resultSet2 = dataBaseHandler.already_have(arraytext[1], arraytext[2]);
-                    int row_counter = 0;
-                    int row_counter_ah = 0;
-                    try {
-                        while (resultSet.next()) {
-                            row_counter++;
-                        }
-                        while (resultSet2.next()) {
-                            row_counter_ah++;
-                        }
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
-                    if (row_counter_ah == 0) {
                         dataBaseHandler.add_gryadka(arraytext[1], arraytext[2], user);
                         flag = "*Грядка добавлена*";
                     }
-                    else if (row_counter_ah == 1){
-                        flag = "*Такая грядка уже существует*";
-                    }
-                }
             } catch (Exception ex) {
                 System.err.println("Неправильный ввод");
             }
