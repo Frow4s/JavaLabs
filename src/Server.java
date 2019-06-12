@@ -22,11 +22,11 @@ public class Server {
     public static SocketAddress client;
 
     private static ConcurrentLinkedDeque<Gryadka> gryadkas = new ConcurrentLinkedDeque<>(); //Создаём потокобезопасную очередь
-    public static String  play() throws Exception {
+    public static String  play(String user) throws Exception {
         DataBaseHandler db=new DataBaseHandler();
         Output story = new Output();
         gryadkas = Parse_xml_Scanner.main();
-        return(story.tellTheStory(db.gryadki(enter_user)));
+        return(story.tellTheStory(db.gryadki(user)));
 
     }
 
@@ -90,7 +90,7 @@ public class Server {
             } else if (line.equals("show")) {
                 write(theFunc.show(enter_user));
             } else if (line.equals("play")) {
-                write(play());
+                write(play(enter_user));
             } else if (line.equals("clear")) {
                 write(theFunc.clear(enter_user));
             } else if (line.equals("stop")) {

@@ -7,13 +7,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2398decc-d588-4e5a-8d4e-a243130d0608" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CommandsController.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CommandsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Register.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Register.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javaFIX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/70c33602-1679-4653-8b03-f3b07ec92874.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/70c33602-1679-4653-8b03-f3b07ec92874.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab4.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Configs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Configs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Const.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Const.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lab4/DataBaseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/DataBaseHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/DatabaseFunc.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/DatabaseFunc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Enums/Condition$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Enums/Condition$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Enums/Condition.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Enums/Condition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Enums/Flowers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Enums/Flowers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Enums/Place.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Enums/Place.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Exception/Pusto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Exception/Pusto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Func.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Func.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Interfaces/ForAll.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Interfaces/ForAll.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Interfaces/ForGryadka.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Interfaces/ForGryadka.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Interfaces/ForPersons.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Interfaces/ForPersons.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/JDBCPostgreSQLExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/JDBCPostgreSQLExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Objects/Gryadka.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Objects/Gryadka.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Objects/House.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Objects/House.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lab4/Output$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Output$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Output.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Output.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Parse_xml_Scanner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Parse_xml_Scanner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Persons/LilMan$TalkinLilMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Persons/LilMan$TalkinLilMan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Persons/LilMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Persons/LilMan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Persons/Man.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Persons/Man.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Persons/Neznaika.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Persons/Neznaika.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lab4/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Server$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lab4/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/To_xml_file.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/To_xml_file.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Xml_remove.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Xml_remove.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/importGson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/importGson.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataBaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBaseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Func.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Func.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -40,22 +77,6 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1601723554">
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="99" />
-          <entry key="sql" value="37" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="99" />
-          <entry key="Scratch" value="37" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FavoritesManager">
     <favorites_list name="Lab4" />
   </component>
@@ -64,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+            <state>
+              <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -73,20 +94,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2002">
-              <caret line="82" column="8" lean-forward="true" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DataBaseHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3349">
-              <caret line="266" column="30" lean-forward="true" selection-start-line="266" selection-start-column="30" selection-end-line="266" selection-end-column="30" />
+            <state relative-caret-position="1564">
+              <caret line="92" column="37" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,42 +104,56 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/javaFIX.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CommandsController.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Register.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-813">
+              <caret line="60" column="20" lean-forward="true" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Func.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#471#472#0" expanded="true" />
-                <element signature="e#504#505#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mail.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Const.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            <state relative-caret-position="170">
+              <caret line="192" selection-start-line="192" selection-end-line="200" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,10 +162,27 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/70c33602-1679-4653-8b03-f3b07ec92874/console.sql">
+        <entry file="file://$PROJECT_DIR$/src/CommandsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="21" selection-start-column="21" selection-end-column="21" />
+            <state relative-caret-position="320">
+              <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2172#2173#0" expanded="true" />
+                <element signature="e#2202#2203#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Parse_xml_Scanner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -153,6 +193,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -166,19 +207,26 @@
       <find>out.prin</find>
       <find>out.p</find>
       <find>System.out.println</find>
-      <find>show</find>
       <find>write</find>
       <find>left</find>
       <find>client</find>
       <find>date</find>
       <find>time</find>
-      <find>info</find>
       <find>remove_</find>
       <find>Sys</find>
       <find>story</find>
       <find>select</find>
-      <find>play</find>
       <find>1000</find>
+      <find>sign</find>
+      <find>login</find>
+      <find>info</find>
+      <find>enter_user</find>
+      <find>show</find>
+      <find>check</find>
+      <find>stop</find>
+      <find>play</find>
+      <find>cle</find>
+      <find>remove</find>
     </findStrings>
     <replaceStrings>
       <replace>write</replace>
@@ -192,14 +240,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Gryadka.java" />
-        <option value="$PROJECT_DIR$/src/TalkinLilMan.java" />
-        <option value="$PROJECT_DIR$/src/LilMan.java" />
-        <option value="$PROJECT_DIR$/src/Pomidor.java" />
-        <option value="$PROJECT_DIR$/src/Strawberry.java" />
-        <option value="$PROJECT_DIR$/src/Cucumber.java" />
-        <option value="$PROJECT_DIR$/src/Objects/Strawberry.java" />
-        <option value="$PROJECT_DIR$/src/Interfaces/ForGryadka.java" />
         <option value="$PROJECT_DIR$/src/Enums/Place.java" />
         <option value="$PROJECT_DIR$/src/Enums/Condition.java" />
         <option value="$PROJECT_DIR$/src/Interfaces/ForPersons.java" />
@@ -239,23 +279,25 @@
         <option value="$PROJECT_DIR$/src/Output.java" />
         <option value="$PROJECT_DIR$/src/Persons/LilMan.java" />
         <option value="$PROJECT_DIR$/src/Client.java" />
-        <option value="$PROJECT_DIR$/src/Server.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/70c33602-1679-4653-8b03-f3b07ec92874/console.sql" />
-        <option value="$PROJECT_DIR$/src/DataBaseHandler.java" />
         <option value="$PROJECT_DIR$/src/Func.java" />
+        <option value="$PROJECT_DIR$/src/DataBaseHandler.java" />
+        <option value="$PROJECT_DIR$/src/Client1.java" />
+        <option value="$PROJECT_DIR$/src/sample.fxml" />
+        <option value="$PROJECT_DIR$/src/Register.fxml" />
+        <option value="$PROJECT_DIR$/src/Register.java" />
+        <option value="$PROJECT_DIR$/src/Persons/CommandsController.fxml" />
+        <option value="$PROJECT_DIR$/src/javaFIX.java" />
+        <option value="$PROJECT_DIR$/src/Server.java" />
+        <option value="$PROJECT_DIR$/src/Controller.java" />
+        <option value="$PROJECT_DIR$/src/CommandsController.java" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="950" />
-    <option name="width" value="979" />
-    <option name="height" value="1040" />
+    <option name="x" value="952" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -282,11 +324,10 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -297,28 +338,24 @@
             <path>
               <item name="Lab4" type="b2602c69:ProjectViewProjectNode" />
               <item name="Lab4" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lab4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lab4" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="javax.mail.jar" type="ab9368bb:PsiFileNode" />
             </path>
             <path>
               <item name="Lab4" type="b2602c69:ProjectViewProjectNode" />
               <item name="Lab4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lab4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lab4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Objects" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Lab4" type="b2602c69:ProjectViewProjectNode" />
               <item name="Lab4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Persons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lab4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -340,7 +377,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -350,16 +387,20 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560155702789" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/activation.jar!/" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Frowas\Desktop\ITMO\Programming\Lab4\src" />
       <recent name="C:\Users\nikis\University\Java\Lab6\JavaLabs\lib" />
     </key>
   </component>
@@ -375,7 +416,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager" selected="Application.javaFIX">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="INPUT" value="src\input.xml" />
@@ -393,15 +434,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataBaseHandler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataBaseHandler" />
+    <configuration name="Client1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Client1" />
       <module name="Lab4" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DatabaseFunc" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DatabaseFunc" />
+    <configuration name="DataBaseHandler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataBaseHandler" />
       <module name="Lab4" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -442,8 +483,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="c" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="c" />
+    <configuration name="javaFIX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaFIX" />
       <module name="Lab4" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -453,18 +494,18 @@
       <item itemvalue="Application.Server" />
       <item itemvalue="Application.JDBCPostgreSQLExample" />
       <item itemvalue="Application.Client" />
-      <item itemvalue="Application.DatabaseFunc" />
-      <item itemvalue="Application.c" />
       <item itemvalue="Application.DataBaseHandler" />
       <item itemvalue="Application.Func" />
+      <item itemvalue="Application.Client1" />
+      <item itemvalue="Application.javaFIX" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.javaFIX" />
         <item itemvalue="Application.Client" />
+        <item itemvalue="Application.Client1" />
         <item itemvalue="Application.Func" />
         <item itemvalue="Application.DataBaseHandler" />
-        <item itemvalue="Application.c" />
-        <item itemvalue="Application.DatabaseFunc" />
       </list>
     </recent_temporary>
   </component>
@@ -506,6 +547,9 @@
       <workItem from="1557914673846" duration="20034000" />
       <workItem from="1560004843580" duration="16421000" />
       <workItem from="1560095432794" duration="16692000" />
+      <workItem from="1560249287306" duration="3345000" />
+      <workItem from="1560333994154" duration="4680000" />
+      <workItem from="1560338893684" duration="16231000" />
     </task>
     <task id="LOCAL-00001" summary="изменил исключение (LilMan)">
       <created>1550357782054</created>
@@ -540,13 +584,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="275496000" />
+    <option name="totallyTimeSpent" value="301253000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49772727" visible="true" weight="0.17114094" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49772727" visible="true" weight="0.15570469" />
       <window_info id="Structure" order="1" sideWeight="0.5022727" side_tool="true" weight="0.14496644" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -554,8 +598,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.5022727" side_tool="true" weight="0.14496644" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986577" weight="0.28368795" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3838527" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4986577" visible="true" weight="0.26203966" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -564,17 +608,19 @@
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32907802" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013423" side_tool="true" weight="0.32765958" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4986577" weight="0.32765958" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4986577" weight="0.32152975" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.33617023" />
+      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.015436241" />
+      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.020134227" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Maven" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,82 +635,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="изменил исключение (LilMan)" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Enums/Condition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interfaces/ForGryadka.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement />
-          <nodes>
-            <node x="" y="">sun</node>
-            <node x="" y="">Interfaces</node>
-            <node x="" y="">jdk</node>
-            <node x="" y="">Persons</node>
-            <node x="" y="">Output</node>
-            <node x="" y="">Objects</node>
-            <node x="" y="">groovyjarjarcommonscli</node>
-            <node x="" y="">Main</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.7377622377622378" x="270.0" y="276.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Enums/Flowers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interfaces/ForAll.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Persons/Man.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Persons/Neznaika.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="49" lean-forward="true" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dtd_gryadkas.dtd" />
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.xml/org/xml/sax/helpers/DefaultHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="294" column="16" selection-start-line="294" selection-start-column="16" selection-end-line="294" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SAXParser.java" />
     <entry file="file://$PROJECT_DIR$/Lab4.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -781,68 +751,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ConsoleApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Configs.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Parse_xml_Scanner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Objects/Gryadka.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="56" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Output.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="39" column="40" lean-forward="true" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Persons/LilMan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="50" column="71" selection-start-line="50" selection-start-column="71" selection-end-line="50" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2002">
-          <caret line="82" column="8" lean-forward="true" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/70c33602-1679-4653-8b03-f3b07ec92874/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" selection-start-column="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/70c33602-1679-4653-8b03-f3b07ec92874/console.sql" />
     <entry file="file://$PROJECT_DIR$/src/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -860,24 +769,164 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Output.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Persons/LilMan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="50" column="71" selection-start-line="50" selection-start-column="71" selection-end-line="50" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Configs.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Client1.java" />
+    <entry file="file://$PROJECT_DIR$/src/sample.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ConsoleApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Register.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataBaseHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3349">
-          <caret line="266" column="30" lean-forward="true" selection-start-line="266" selection-start-column="30" selection-end-line="266" selection-end-column="30" />
+        <state relative-caret-position="51">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Func.java">
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/javafx.graphics/javafx/stage/Stage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+        <state relative-caret-position="182">
+          <caret line="275" column="32" selection-start-line="275" selection-start-column="32" selection-end-line="275" selection-end-column="32" />
+          <folding>
+            <element signature="e#9038#9039#0" expanded="true" />
+            <element signature="e#9066#9067#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Objects/Gryadka.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="56" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Register.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-813">
+          <caret line="60" column="20" lean-forward="true" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1564">
+          <caret line="92" column="37" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Parse_xml_Scanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Func.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="192" selection-start-line="192" selection-end-line="200" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CommandsController.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CommandsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2172#2173#0" expanded="true" />
+            <element signature="e#2202#2203#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaFIX.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -949,7 +998,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>postgresql-42.2.5</last-edited>
+          <last-edited>lib</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

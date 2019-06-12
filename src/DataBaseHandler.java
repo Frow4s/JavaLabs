@@ -10,9 +10,6 @@ import java.sql.ResultSet;
 import java.util.SortedMap;
 import java.util.concurrent.ConcurrentLinkedDeque;
 
-
-//Collable statement узнать!!!!
-
 public class DataBaseHandler extends Configs {
     Connection dbconnection;
 
@@ -215,11 +212,16 @@ public class DataBaseHandler extends Configs {
             PreparedStatement prSt=getDbconnection().prepareStatement(show);
             ResultSet res = prSt.executeQuery();
             while (res.next()){
-                String str = res.getString("gryadka") + " " + res.getString("number");
-                collection += str+"\n";
+                if(!res.isLast()) {
+                    String str = res.getString("gryadka") + " " + res.getString("number");
+                    collection += str + "\n";
+                } else{
+                    collection+=res.getString("gryadka") + " " + res.getString("number");
+                }
             }
+
        }catch (Exception e){
-            return ("Ошибка вывода коллекции");
+            return ("Ошибка вывода коллекции"+" "+e);
         }
         if(collection.equals("")){
             return("Коллекция пуста");
