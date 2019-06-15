@@ -4,24 +4,30 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Locale;
 import java.util.ResourceBundle;
+
+import javafx.beans.Observable;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-public class Controller {
+public class Controller implements Initializable {
     String enter_user;
-
 
     public String getLogin (){
         return enter_user;
     }
+
+    @FXML
+    private Label Hello;
+
+    @FXML
+    private Label Authorization;
 
     @FXML
     private ResourceBundle resources;
@@ -41,8 +47,16 @@ public class Controller {
     @FXML
     private Button SignInButton;
 
+    private ResourceBundle resourceBundle;
+
+    private FXMLLoader fxmlLoader;
+
     @FXML
-    void initialize() {
+    private ComboBox<?> comboBoxLocales;
+
+    @FXML
+    public void initialize (URL location,ResourceBundle resource) {
+        this.resourceBundle=resource;
 
         SignInButton.setOnAction(event -> {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -64,10 +78,10 @@ public class Controller {
                     fileWriter.close();
                     SignInButton.getScene().getWindow().hide();
                     SignUpButton.getScene().getWindow().hide();
-                    FXMLLoader loader= new FXMLLoader();
-                    loader.setLocation(getClass().getResource("CommandsController.fxml"));
-
+                    FXMLLoader loader=new FXMLLoader();
                     try {
+                        loader.setLocation(getClass().getResource("CommandsController.fxml"));
+                        loader.setResources(ResourceBundle.getBundle("Bundle.Locale",new Locale("en")));
                         loader.load();
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -90,8 +104,10 @@ public class Controller {
         });
         SignUpButton.setOnAction(event -> {
             SignUpButton.getScene().getWindow().hide();
-            FXMLLoader loader= new FXMLLoader();
+            FXMLLoader loader=new FXMLLoader();
+
             loader.setLocation(getClass().getResource("Register.fxml"));
+            loader.setResources(ResourceBundle.getBundle("Bundle.Locale",new Locale("en")));
             try {
                 loader.load();
             } catch (IOException e) {
@@ -129,6 +145,7 @@ public class Controller {
         } else {
             return "*Неправильный логин или пароль*";
         }
+
 
     }
 }

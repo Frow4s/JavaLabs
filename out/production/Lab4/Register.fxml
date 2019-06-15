@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Register">
    <children>
       <ImageView fitHeight="429.0" fitWidth="466.0" layoutX="68.0" pickOnBounds="true" preserveRatio="true">
@@ -15,22 +14,22 @@
             <Image url="@6mlmuw.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="RegisterBackButton" layoutX="487.0" layoutY="14.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="94.0" text="Назад">
+      <Button fx:id="RegisterBackButton" layoutX="487.0" layoutY="14.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="94.0" text="%Back">
          <font>
             <Font name="Lobster" size="19.0" />
          </font>
       </Button>
-      <TextField fx:id="RegisterLoginText" layoutX="194.0" layoutY="123.0" prefHeight="39.0" prefWidth="212.0" promptText="Логин">
+      <TextField fx:id="RegisterLoginText" layoutX="194.0" layoutY="123.0" prefHeight="39.0" prefWidth="212.0" promptText="%Login">
          <font>
             <Font name="Lobster" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="RegisterMailText" layoutX="194.0" layoutY="180.0" prefHeight="39.0" prefWidth="212.0" promptText="Почта">
+      <TextField fx:id="RegisterMailText" layoutX="194.0" layoutY="180.0" prefHeight="39.0" prefWidth="212.0" promptText="%Email">
          <font>
             <Font name="Lobster" size="20.0" />
          </font>
       </TextField>
-      <Button fx:id="RegisterButtom" layoutX="195.0" layoutY="289.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="212.0" text="Зарегистрироваться">
+      <Button fx:id="RegisterButtom" layoutX="195.0" layoutY="289.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="212.0" text="%Sign_up">
          <font>
             <Font name="Lobster" size="19.0" />
          </font>

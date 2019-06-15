@@ -6,65 +6,64 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CommandsController">
    <children>
-      <Button fx:id="PlayButton" layoutX="6.0" layoutY="33.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="136.0" text="Воспроизвести">
+      <Button fx:id="PlayButton" layoutX="6.0" layoutY="33.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="136.0" text="%Play">
          <font>
             <Font name="Lobster" size="17.0" />
          </font>
       </Button>
-      <Button fx:id="InfoButton" layoutX="302.0" layoutY="33.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="136.0" text="Информация">
+      <Button fx:id="InfoButton" layoutX="302.0" layoutY="33.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="136.0" text="%Info">
          <font>
             <Font name="Lobster" size="17.0" />
          </font>
       </Button>
-      <Button fx:id="ClearButton" layoutX="447.0" layoutY="33.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="142.0" text="Очистить">
+      <Button fx:id="ClearButton" layoutX="447.0" layoutY="33.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="142.0" text="%Clear">
          <font>
             <Font name="Lobster" size="17.0" />
          </font>
       </Button>
-      <Button fx:id="ShowButton" layoutX="151.0" layoutY="33.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="142.0" text="Показать коллекцию">
+      <Button fx:id="ShowButton" layoutX="151.0" layoutY="33.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="142.0" text="%Show">
          <font>
             <Font name="Lobster" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="DeleteLowerButton" layoutX="6.0" layoutY="270.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="142.0" text="Удалить меньше">
+      <Button fx:id="DeleteLowerButton" layoutX="6.0" layoutY="270.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="142.0" text="%Delete_lower">
          <font>
             <Font name="Lobster" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="DeleteButton" layoutX="6.0" layoutY="200.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="142.0" text="Удалить">
+      <Button fx:id="DeleteButton" layoutX="6.0" layoutY="200.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="142.0" text="%Delete">
          <font>
             <Font name="Lobster" size="17.0" />
          </font>
       </Button>
-      <Button fx:id="AddButton" layoutX="6.0" layoutY="127.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="142.0" text="Добавить">
+      <Button fx:id="AddButton" layoutX="6.0" layoutY="127.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="142.0" text="%Add">
          <font>
             <Font name="Lobster" size="17.0" />
          </font>
       </Button>
-      <Label layoutX="177.0" layoutY="243.0" prefHeight="26.0" prefWidth="108.0" text="Количество:">
+      <Label fx:id="Count3" layoutX="177.0" layoutY="243.0" prefHeight="26.0" prefWidth="108.0" text="%Count">
          <font>
             <Font name="Lobster" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="177.0" layoutY="100.0" prefHeight="26.0" prefWidth="108.0" text="Название:">
+      <Label fx:id="Name1" layoutX="177.0" layoutY="100.0" prefHeight="26.0" prefWidth="108.0" text="%Name">
          <font>
             <Font name="Lobster" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="339.0" layoutY="100.0" prefHeight="26.0" prefWidth="108.0" text="Количество:">
+      <Label fx:id="Count1" layoutX="339.0" layoutY="100.0" prefHeight="26.0" prefWidth="108.0" text="%Count">
          <font>
             <Font name="Lobster" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="185.0" layoutY="173.0" prefHeight="26.0" prefWidth="108.0" text="Название:">
+      <Label fx:id="Name2" layoutX="185.0" layoutY="173.0" prefHeight="26.0" prefWidth="108.0" text="%Name">
          <font>
             <Font name="Lobster" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="339.0" layoutY="173.0" prefHeight="26.0" prefWidth="108.0" text="Количество:">
+      <Label fx:id="Count2" layoutX="339.0" layoutY="173.0" prefHeight="26.0" prefWidth="108.0" text="%Count">
          <font>
             <Font name="Lobster" size="17.0" />
          </font>

@@ -1,16 +1,24 @@
 
 import javafx.application.Application;
+import javafx.beans.Observable;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
-public class javaFIX extends Application {
+public class javaFIX extends Application  {
+
     public void start(Stage primaryStage) throws Exception{
-        Parent root= FXMLLoader.load(getClass().getResource("sample.fxml"));
+        FXMLLoader fxmlLoader=new FXMLLoader();
+        fxmlLoader.setResources(ResourceBundle.getBundle("Bundle.Locale",new Locale("en")));
+        fxmlLoader.setLocation(getClass().getResource("sample.fxml"));
+        Parent root= fxmlLoader.load();
         primaryStage.getIcons().add(new Image("icon.jpg"));
         primaryStage.setTitle("Программа маленьких садоводов");
         primaryStage.setScene(new Scene(root,600,400));
@@ -25,4 +33,5 @@ public class javaFIX extends Application {
         }
         launch(args);
     }
+
 }

@@ -7,51 +7,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2398decc-d588-4e5a-8d4e-a243130d0608" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CommandsController.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CommandsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Register.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Register.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/javaFIX.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/70c33602-1679-4653-8b03-f3b07ec92874.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/70c33602-1679-4653-8b03-f3b07ec92874.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bundle/Locale_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bundle/Locale_nl.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bundle/Locale_ru.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bundle/Locale_sv.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LocaleManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab4.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Configs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Configs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Const.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Const.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/DataBaseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/DataBaseHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/DatabaseFunc.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/DatabaseFunc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Enums/Condition$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Enums/Condition$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Enums/Condition.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Enums/Condition.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Enums/Flowers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Enums/Flowers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Enums/Place.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Enums/Place.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Exception/Pusto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Exception/Pusto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Func.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Func.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Interfaces/ForAll.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Interfaces/ForAll.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Interfaces/ForGryadka.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Interfaces/ForGryadka.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Interfaces/ForPersons.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Interfaces/ForPersons.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/JDBCPostgreSQLExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/JDBCPostgreSQLExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Objects/Gryadka.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Objects/Gryadka.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Objects/House.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Objects/House.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Output$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Output$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Output.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Output.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Parse_xml_Scanner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Parse_xml_Scanner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Persons/LilMan$TalkinLilMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Persons/LilMan$TalkinLilMan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Persons/LilMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Persons/LilMan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Persons/Man.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Persons/Man.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Persons/Neznaika.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Persons/Neznaika.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Server$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/To_xml_file.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/To_xml_file.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Xml_remove.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Xml_remove.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab4/importGson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/importGson.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataBaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBaseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/CommandsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/CommandsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/CommandsController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/CommandsController.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Register.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/Register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/Register.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/javaFIX.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/javaFIX.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab4/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab4/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CommandsController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandsController.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CommandsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Register.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaFIX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaFIX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,20 +58,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Client.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/javaFIX.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Server.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1564">
-              <caret line="92" column="37" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
+            <state relative-caret-position="123">
+              <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -103,13 +70,54 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/javaFIX.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/javafx.graphics/javafx/application/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+            <state relative-caret-position="114">
+              <caret line="350" column="25" selection-start-line="350" selection-start-column="25" selection-end-line="350" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LocaleManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#371#372#0" expanded="true" />
+                <element signature="e#404#405#0" expanded="true" />
+                <element signature="e#461#462#0" expanded="true" />
+                <element signature="e#516#517#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lang.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-130">
+              <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+              <folding>
+                <element signature="e#338#339#0" expanded="true" />
+                <element signature="e#366#367#0" expanded="true" />
+                <element signature="e#399#400#0" expanded="true" />
+                <element signature="e#428#429#0" expanded="true" />
+                <element signature="e#459#460#0" expanded="true" />
+                <element signature="e#486#487#0" expanded="true" />
+                <element signature="e#517#518#0" expanded="true" />
+                <element signature="e#544#545#0" expanded="true" />
+                <element signature="e#584#585#0" expanded="true" />
+                <element signature="e#616#617#0" expanded="true" />
+                <element signature="e#655#656#0" expanded="true" />
+                <element signature="e#689#690#0" expanded="true" />
+                <element signature="e#733#734#0" expanded="true" />
+                <element signature="e#769#770#0" expanded="true" />
+                <element signature="e#809#810#0" expanded="true" />
+                <element signature="e#841#842#0" expanded="true" />
+                <element signature="e#887#888#0" expanded="true" />
+                <element signature="e#926#927#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -118,68 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CommandsController.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Register.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-813">
-              <caret line="60" column="20" lean-forward="true" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Func.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="192" selection-start-line="192" selection-end-line="200" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CommandsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2172#2173#0" expanded="true" />
-                <element signature="e#2202#2203#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Parse_xml_Scanner.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+            <state relative-caret-position="-1819">
+              <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -192,8 +140,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="XML Properties File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -227,6 +176,7 @@
       <find>play</find>
       <find>cle</find>
       <find>remove</find>
+      <find>jav</find>
     </findStrings>
     <replaceStrings>
       <replace>write</replace>
@@ -240,9 +190,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Enums/Place.java" />
-        <option value="$PROJECT_DIR$/src/Enums/Condition.java" />
-        <option value="$PROJECT_DIR$/src/Interfaces/ForPersons.java" />
         <option value="$PROJECT_DIR$/src/Persons/TalkinLilMan.java" />
         <option value="$PROJECT_DIR$/src/Exception/Pusto.java" />
         <option value="$PROJECT_DIR$/src/Interfaces/ForAll.java" />
@@ -285,17 +232,20 @@
         <option value="$PROJECT_DIR$/src/Client1.java" />
         <option value="$PROJECT_DIR$/src/sample.fxml" />
         <option value="$PROJECT_DIR$/src/Register.fxml" />
-        <option value="$PROJECT_DIR$/src/Register.java" />
         <option value="$PROJECT_DIR$/src/Persons/CommandsController.fxml" />
-        <option value="$PROJECT_DIR$/src/javaFIX.java" />
         <option value="$PROJECT_DIR$/src/Server.java" />
-        <option value="$PROJECT_DIR$/src/Controller.java" />
+        <option value="$PROJECT_DIR$/src/Bundle/Locale_sv.properties" />
+        <option value="$PROJECT_DIR$/src/Register.java" />
         <option value="$PROJECT_DIR$/src/CommandsController.java" />
+        <option value="$PROJECT_DIR$/src/LocaleManager.java" />
+        <option value="$PROJECT_DIR$/src/Lang.java" />
+        <option value="$PROJECT_DIR$/src/Controller.java" />
+        <option value="$PROJECT_DIR$/src/javaFIX.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
+    <option name="x" value="-8" />
     <option name="width" value="977" />
     <option name="height" value="1038" />
   </component>
@@ -355,6 +305,19 @@
               <item name="Lab4" type="b2602c69:ProjectViewProjectNode" />
               <item name="Lab4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lab4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lab4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resource Bundle 'Locale'" type="a6c14932:ResourceBundleNode" />
+            </path>
+            <path>
+              <item name="Lab4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lab4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Persons" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -387,7 +350,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560155702789" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/activation.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Polina/javafx-course" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -549,7 +512,7 @@
       <workItem from="1560095432794" duration="16692000" />
       <workItem from="1560249287306" duration="3345000" />
       <workItem from="1560333994154" duration="4680000" />
-      <workItem from="1560338893684" duration="16231000" />
+      <workItem from="1560338893684" duration="33313000" />
     </task>
     <task id="LOCAL-00001" summary="изменил исключение (LilMan)">
       <created>1550357782054</created>
@@ -584,13 +547,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="301253000" />
+    <option name="totallyTimeSpent" value="318335000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49772727" visible="true" weight="0.15570469" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49772727" visible="true" weight="0.020134227" />
       <window_info id="Structure" order="1" sideWeight="0.5022727" side_tool="true" weight="0.14496644" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -599,7 +562,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.5022727" side_tool="true" weight="0.14496644" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3838527" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4986577" visible="true" weight="0.26203966" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986577" visible="true" weight="0.26203966" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -635,35 +598,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="изменил исключение (LilMan)" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Lab4.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/input1.xml" />
-    <entry file="file://$PROJECT_DIR$/src/JsonParser.java" />
-    <entry file="file://$PROJECT_DIR$/allclasses-frame.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-545" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Xml_remove.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ConsoleApp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-396" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Parse_xml.java" />
-    <entry file="file://$PROJECT_DIR$/src/CountComparator.java" />
-    <entry file="file://$PROJECT_DIR$/src/input2.xml" />
-    <entry file="file://$PROJECT_DIR$/src/Objects/House.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/toxic2.xml" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/net/DualStackPlainDatagramSocketImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -787,26 +721,10 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Client1.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ConsoleApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Register.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
@@ -835,16 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="12" column="56" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Register.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-813">
-          <caret line="60" column="20" lean-forward="true" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -884,24 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CommandsController.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Client.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -909,10 +799,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bundle/Resource bundle 'Locale'.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bundle/Locale_ru.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bundle/Locale_ru.properties.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bundle/Locale_sv.properties">
+      <provider selected="true" editor-type-id="ResourceBundle" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bundle/Locale_en.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bundle/Locale_nl.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bundle/Locale_ru.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Register.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Persons/Locale.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CommandsController.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/CommandsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
+        <state relative-caret-position="-2065">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2172#2173#0" expanded="true" />
@@ -921,10 +867,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="108" lean-forward="true" selection-start-line="12" selection-start-column="108" selection-end-line="12" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Register.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lang.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-130">
+          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+          <folding>
+            <element signature="e#338#339#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#584#585#0" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#655#656#0" expanded="true" />
+            <element signature="e#689#690#0" expanded="true" />
+            <element signature="e#733#734#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#809#810#0" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
+            <element signature="e#887#888#0" expanded="true" />
+            <element signature="e#926#927#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/javafx.graphics/javafx/application/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="350" column="25" selection-start-line="350" selection-start-column="25" selection-end-line="350" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LocaleManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+            <element signature="e#461#462#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1819">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/javaFIX.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        <state relative-caret-position="123">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -942,7 +963,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

@@ -1,19 +1,19 @@
 import Objects.Gryadka;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-
 import java.io.File;
-import java.io.FileReader;
+import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 import java.util.Scanner;
 import java.util.concurrent.ConcurrentLinkedDeque;
 
-public class CommandsController {
+public class CommandsController implements Initializable {
 
 
     @FXML
@@ -38,6 +38,21 @@ public class CommandsController {
     private Button AddButton;
 
     @FXML
+    private Label Count3;
+
+    @FXML
+    private Label Name1;
+
+    @FXML
+    private Label Count1;
+
+    @FXML
+    private Label Name2;
+
+    @FXML
+    private Label Count2;
+
+    @FXML
     private TextField AddNameText;
 
     @FXML
@@ -53,7 +68,12 @@ public class CommandsController {
     private TextField DeleteLowerText;
 
     @FXML
-    void initialize() throws Exception {
+    private ResourceBundle resourceBundle;
+
+    @FXML
+    public void initialize (URL location, ResourceBundle resource) {
+        this.resourceBundle=resource;
+
         try {
             setUser();
         } catch (Exception e){
