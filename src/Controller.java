@@ -47,16 +47,56 @@ public class Controller implements Initializable {
     @FXML
     private Button SignInButton;
 
-    private ResourceBundle resourceBundle;
-
-    private FXMLLoader fxmlLoader;
 
     @FXML
-    private ComboBox<?> comboBoxLocales;
+    private Button EN_button;
+
+    @FXML
+    private Button RU_button;
+
+    @FXML
+    private Button SV_button;
+
+    @FXML
+    private Button NL_button;
+
+    private ResourceBundle resourceBundle;
+
 
     @FXML
     public void initialize (URL location,ResourceBundle resource) {
         this.resourceBundle=resource;
+//        SignUpButton.getScene().getWindow().hide();
+//        FXMLLoader loader=new FXMLLoader();
+//
+//        loader.setLocation(getClass().getResource("Register.fxml"));
+//        loader.setResources(ResourceBundle.getBundle("Bundle.Locale",new Locale("en")));
+//        try {
+//            loader.load();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        Parent root=loader.getRoot();
+//        Stage stage=new Stage();
+//        stage.setScene(new Scene(root));
+//        stage.show();
+
+        RU_button.setOnAction(event -> {
+            RU_button.getScene().getWindow().hide();
+            FXMLLoader loader=new FXMLLoader();
+            loader.setLocation(getClass().getResource("sample.fxml"));
+        loader.setResources(ResourceBundle.getBundle("Bundle.Locale",LocaleManager.RU_LOCALE));
+        LocaleManager.setCurrentLocale(LocaleManager.RU_LOCALE);
+        try {
+            loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Parent root=loader.getRoot();
+        Stage stage=new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
+        });
 
         SignInButton.setOnAction(event -> {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);

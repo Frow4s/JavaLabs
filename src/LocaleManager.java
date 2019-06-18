@@ -6,13 +6,13 @@ public class LocaleManager {
     public static final Locale NL_LOCALE=new Locale("nl");
     public static final Locale SV_LOCALE=new Locale("sv");
 
-    public static Lang currentLang;
+    public static Locale currentLang;
 
-    public static Lang getCurrentLang(){
+    public static Locale getCurrentLocale(){
         return currentLang;
     }
 
-    public static void setCurrentLang(Lang currentLang) {
+    public static void setCurrentLocale(Locale currentLang) {
         LocaleManager.currentLang = currentLang;
     }
 }
