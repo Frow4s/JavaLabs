@@ -7,6 +7,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.ResultSet;
+import java.time.OffsetDateTime;
+import java.time.ZoneId;
+import java.util.Locale;
 import java.util.SortedMap;
 import java.util.concurrent.ConcurrentLinkedDeque;
 
@@ -95,17 +98,19 @@ public class DataBaseHandler extends Configs {
         return resultSet;
     }
 
-    public void add_gryadka(String name, String count, String user_login){
+    public void add_gryadka(String name, String count, String user_login, OffsetDateTime time){
         String insert = "INSERT INTO " + Const.GRYADKI_TABLE + "(" +
                 Const.GRYADKI_CREATOR + "," +
                 Const.GRYADKI_NAME + "," +
+                "date"+","+
                 Const.GRYADKI_COUNT + ")" +
-                "VALUES(?,?,?)";
+                "VALUES(?,?,?,?)";
         try {
             PreparedStatement prSt = getDbconnection().prepareStatement(insert);
             prSt.setString(1, user_login);
             prSt.setString(2, name);
-            prSt.setString(3, count);
+            prSt.setString(4, count);
+            prSt.setString(3,time.toString());
             prSt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -206,6 +211,19 @@ public class DataBaseHandler extends Configs {
     }
 
     public String show(String user_login){
+        ZoneId zoneId=ZoneId.systemDefault();
+        if(LocaleManager.getCurrentLocale().equals(LocaleManager.EN_LOCALE)){
+            zoneId=ZoneId.of("Australia/Sydney");
+        }
+        if(LocaleManager.getCurrentLocale().equals(LocaleManager.RU_LOCALE)){
+            zoneId=ZoneId.of("Europe/Moscow");
+        }
+        if(LocaleManager.getCurrentLocale().equals(LocaleManager.SV_LOCALE)){
+            zoneId=ZoneId.of("Europe/Stockholm");
+        }
+        if(LocaleManager.getCurrentLocale().equals(LocaleManager.NL_LOCALE)){
+            zoneId=ZoneId.of("Europe/Amsterdam");
+        }
         String collection="";
         String show="SELECT * FROM " + Const.GRYADKI_TABLE;
         try {
@@ -213,10 +231,10 @@ public class DataBaseHandler extends Configs {
             ResultSet res = prSt.executeQuery();
             while (res.next()){
                 if(!res.isLast()) {
-                    String str = res.getString("gryadka") + " " + res.getString("number");
+                    String str = res.getString("gryadka") + " " + res.getString("number")+" "+OffsetDateTime.parse(res.getString("date")).toZonedDateTime().withZoneSameInstant(zoneId).toLocalDateTime();
                     collection += str + "\n";
                 } else{
-                    collection+=res.getString("gryadka") + " " + res.getString("number");
+                    collection+=res.getString("gryadka") + " " + res.getString("number")+" "+OffsetDateTime.parse(res.getString("date")).toZonedDateTime().withZoneSameInstant(zoneId).toLocalDateTime();
                 }
             }
 

@@ -9,6 +9,7 @@ import java.io.File;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.OffsetDateTime;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 import java.util.concurrent.ConcurrentLinkedDeque;
@@ -189,6 +190,7 @@ public class CommandsController implements Initializable {
     }
 
     public String add(String text, String user) {
+        OffsetDateTime time=OffsetDateTime.now();
         String[] arraytext = text.split(" ");
         String flag = "*Неправильный ввод*";
         DataBaseHandler dataBaseHandler = new DataBaseHandler();
@@ -200,7 +202,7 @@ public class CommandsController implements Initializable {
                     System.out.println(flag);
                     return flag;
                 } else {
-                    dataBaseHandler.add_gryadka(arraytext[1], arraytext[2], user);
+                    dataBaseHandler.add_gryadka(arraytext[1], arraytext[2], user,time);
                     flag = "*Грядка добавлена*";
                 }
             } catch (Exception ex) {

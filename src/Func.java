@@ -9,6 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.*;
 import java.util.Properties;
 
@@ -127,7 +128,7 @@ public class Func {
                     System.out.println(flag);
                     return flag;
                 } else {
-                        dataBaseHandler.add_gryadka(arraytext[1], arraytext[2], user);
+                        dataBaseHandler.add_gryadka(arraytext[1], arraytext[2], user, OffsetDateTime.now());
                         flag = "*Грядка добавлена*";
                     }
             } catch (Exception ex) {

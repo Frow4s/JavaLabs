@@ -46,6 +46,7 @@ public class Register implements Initializable {
             RegisterBackButton.getScene().getWindow().hide();
             FXMLLoader loader= new FXMLLoader();
             loader.setLocation(getClass().getResource("sample.fxml"));
+            loader.setResources(ResourceBundle.getBundle("Bundle.Locale",LocaleManager.getCurrentLocale()));
             try {
                 loader.load();
             } catch (IOException e) {
