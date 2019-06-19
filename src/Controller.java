@@ -5,9 +5,9 @@ import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Locale;
+import java.util.Observable;
 import java.util.ResourceBundle;
 
-import javafx.beans.Observable;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -16,7 +16,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-public class Controller implements Initializable {
+public class Controller extends Observable implements Initializable {
     String enter_user;
 
     public String getLogin (){
@@ -82,20 +82,27 @@ public class Controller implements Initializable {
 //        stage.show();
 
         RU_button.setOnAction(event -> {
-            RU_button.getScene().getWindow().hide();
-            FXMLLoader loader=new FXMLLoader();
-            loader.setLocation(getClass().getResource("sample.fxml"));
-        loader.setResources(ResourceBundle.getBundle("Bundle.Locale",LocaleManager.RU_LOCALE));
-        LocaleManager.setCurrentLocale(LocaleManager.RU_LOCALE);
-        try {
-            loader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        Parent root=loader.getRoot();
-        Stage stage=new Stage();
-        stage.setScene(new Scene(root));
-        stage.show();
+            LocaleManager.setCurrentLocale(LocaleManager.RU_LOCALE);
+            setChanged();
+            notifyObservers(LocaleManager.RU_LOCALE);
+        });
+
+        EN_button.setOnAction(event -> {
+            LocaleManager.setCurrentLocale(LocaleManager.EN_LOCALE);
+            setChanged();
+            notifyObservers(LocaleManager.EN_LOCALE);
+        });
+
+        SV_button.setOnAction(event -> {
+            LocaleManager.setCurrentLocale(LocaleManager.SV_LOCALE);
+            setChanged();
+            notifyObservers(LocaleManager.SV_LOCALE);
+        });
+
+        NL_button.setOnAction(event -> {
+            LocaleManager.setCurrentLocale(LocaleManager.NL_LOCALE);
+            setChanged();
+            notifyObservers(LocaleManager.NL_LOCALE);
         });
 
         SignInButton.setOnAction(event -> {
@@ -109,35 +116,35 @@ public class Controller implements Initializable {
                 alert.showAndWait();
             } else {
 
-            try {
-                String result=login(log_in);
-                if(result.equals("*Вход прошел успешно*")){
-                    System.out.println(loginS);
-                    FileWriter fileWriter=new FileWriter("login.xml");
-                    fileWriter.write(loginS);
-                    fileWriter.close();
-                    SignInButton.getScene().getWindow().hide();
-                    SignUpButton.getScene().getWindow().hide();
-                    FXMLLoader loader=new FXMLLoader();
-                    try {
-                        loader.setLocation(getClass().getResource("CommandsController.fxml"));
-                        loader.setResources(ResourceBundle.getBundle("Bundle.Locale",new Locale("en")));
-                        loader.load();
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                try {
+                    String result=login(log_in);
+                    if(result.equals("*Вход прошел успешно*")){
+                        System.out.println(loginS);
+                        FileWriter fileWriter=new FileWriter("login.xml");
+                        fileWriter.write(loginS);
+                        fileWriter.close();
+                        SignInButton.getScene().getWindow().hide();
+                        SignUpButton.getScene().getWindow().hide();
+                        FXMLLoader loader=new FXMLLoader();
+                        try {
+                            loader.setLocation(getClass().getResource("CommandsController.fxml"));
+                            loader.setResources(ResourceBundle.getBundle("Bundle.Locale",LocaleManager.getCurrentLocale()));
+                            loader.load();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        Parent root=loader.getRoot();
+                        Stage stage=new Stage();
+                        stage.setScene(new Scene(root));
+                        stage.show();
+                    }else {
+                        alert.setContentText(result);
+                        alert.showAndWait();
                     }
-                    Parent root=loader.getRoot();
-                    Stage stage=new Stage();
-                    stage.setScene(new Scene(root));
-                    stage.show();
-                }else {
-                    alert.setContentText(result);
+                } catch (Exception e) {
+                    alert.setAlertType(Alert.AlertType.ERROR);
+                    alert.setContentText("Ошибка авторизации");
                     alert.showAndWait();
-                }
-            } catch (Exception e) {
-                alert.setAlertType(Alert.AlertType.ERROR);
-                alert.setContentText("Ошибка авторизации");
-                alert.showAndWait();
                 }
             }
 
@@ -147,7 +154,7 @@ public class Controller implements Initializable {
             FXMLLoader loader=new FXMLLoader();
 
             loader.setLocation(getClass().getResource("Register.fxml"));
-            loader.setResources(ResourceBundle.getBundle("Bundle.Locale",new Locale("en")));
+            loader.setResources(ResourceBundle.getBundle("Bundle.Locale",LocaleManager.getCurrentLocale()));
             try {
                 loader.load();
             } catch (IOException e) {
